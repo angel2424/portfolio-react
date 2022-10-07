@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from 'react'
 import weather from '../../images/weather_app.png'
 import ecommerce from '../../images/ecommerce_img.png'
 import Project from '../Project'
 
 const ProjectsSection = () => {
-  
-  const [size, setSize] = useState(null)
 
-  useEffect(() => {
-      setSize(window.innerWidth)
-  },[])
 
   return (
     <div className='projects_section'>

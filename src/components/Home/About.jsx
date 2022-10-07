@@ -1,13 +1,6 @@
-import React, { useEffect, useState } from 'react'
 import about from '../../images/about.jpg'
 
 const About = () => {
-
-  const [size, setSize] = useState(null)
-
-  useEffect(() => {
-      setSize(window.innerWidth)
-  },[])
 
   return (
     <div className={'about flex'}>

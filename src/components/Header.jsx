@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import {FaInstagram, FaFacebookSquare,FaGithub} from 'react-icons/fa'
 
 const Header = () => {
@@ -7,10 +7,6 @@ const Header = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
-  }
-
-  const close = () => {
-    setIsOpen(false)
   }
 
   return (

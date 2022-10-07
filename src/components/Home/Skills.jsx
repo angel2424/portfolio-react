@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import js from '../../images/js.png'
 import react from '../../images/react.png'
 import nextjs from '../../images/nextjs.png'
@@ -7,12 +6,6 @@ import npm from '../../images/npm.png'
 import github from '../../images/github.png'
 
 const Skills = () => {
-
-    const [size, setSize] = useState(null)
-
-    useEffect(() => {
-        setSize(window.innerWidth)
-    },[])
 
   return (
     <div className='skills'>
