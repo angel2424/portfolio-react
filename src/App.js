@@ -11,8 +11,8 @@ function App() {
       <CustomCursor />
       <Header />
       <Routes>
-        <Route path='/' element={<Home />}/>
-        <Route path='/portfolio' element={<Portfolio />}/>
+        <Route exact path='/' element={<Home />}/>
+        <Route exact path='/portfolio' element={<Portfolio />}/>
       </Routes>
     </>
   );
