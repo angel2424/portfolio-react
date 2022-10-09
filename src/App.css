@@ -270,6 +270,20 @@ header {
   background-color: #31809d57;
 }
 
+/* Footer */
+
+.footer {
+  background-color: #222233;
+  padding: var(--padding-regular);
+}
+
+.footer_copySocial {
+  align-items: flex-end;
+  margin-top: 30px;
+}
+
+/* ---------------------- */
+
 /* Portfolio page */
 
 .portfolio_hero {
@@ -282,6 +296,40 @@ header {
   padding: var(--padding-regular);
   padding-top: 0;
 }
+
+/* Project Page */
+
+.page {
+  
+}
+
+.page_hero {
+  padding: var(--padding-regular);
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.page_heroContent {
+  padding: var(--padding-regular);
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.page_heroContent h3{
+  color: #a1a1a1;
+}
+
+.spline {
+  margin: 0;
+  transform: scale(0.9);
+  align-self: flex-end;
+}
+
 
 
 
@@ -395,11 +443,29 @@ header {
     width: auto;
   }
 
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer_copySocial {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .footer_icons {
+    margin-top: 50px;
+  }
+
   .portfolio_hero {
     padding: var(--padding-regular);
     padding-top: 155px;
     padding-bottom: 50px;
   }
+
+  
 
 }
 

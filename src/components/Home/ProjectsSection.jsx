@@ -1,5 +1,4 @@
-import weather from '../../images/weather_app.png'
-import ecommerce from '../../images/ecommerce_img.png'
+import projects from '../../json/projects.json'
 import Project from '../Project'
 
 const ProjectsSection = () => {
@@ -10,8 +9,9 @@ const ProjectsSection = () => {
         <h1 className='xl'>My favorite work</h1>
 
         <div className={'projects grid'}>
-            <Project img={weather} title={'Weather App'}/>
-            <Project img={ecommerce} title={'E-commerce Product Page'}/>
+          {projects.map(project => (
+            <Project key={project.id} img={project.img} title={project.title} link={`/project/${project.slug}`}/>
+          ))}
         </div>
         <div className='projects_sectionButton'>
           <button className='button xs'>

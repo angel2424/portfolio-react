@@ -3,7 +3,7 @@ import about from '../../images/about.jpg'
 const About = () => {
 
   return (
-    <div className={'about flex'}>
+    <div className={'about flex'} id='about'>
         <img src={about} alt="" />
         <div className={`about_text flex direction-c jc-c`}>
             <h2 className='xl'>About me</h2>
