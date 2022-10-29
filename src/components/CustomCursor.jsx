@@ -33,6 +33,9 @@ const CustomCursor = () => {
           else if (e.target.classList.contains('cursor-link')) {
             setIsLink(true)
           }
+          else if (e.target.classList.contains('not-cursor-link')) {
+            setIsLink(false)
+          }
           else {
             setIsLink(false)
           }

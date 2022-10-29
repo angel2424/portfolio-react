@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import CustomCursor from './components/CustomCursor';
-import { useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { useEffect } from 'react';
 import Loader from './components/Loader';
 import ProjectPage from './pages/ProjectPage';
@@ -14,11 +14,11 @@ function App() {
 
   const [animation, setAnimation] = useState(true)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setTimeout(() => {
       setAnimation(false);
     }, 2700)
-  })
+  }, [])
 
   return (
     <> 

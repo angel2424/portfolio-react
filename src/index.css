@@ -3,6 +3,8 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  z-index: 2;
+  position: relative;
 }
 
 html {
@@ -56,8 +58,8 @@ select:-webkit-autofill:focus {
 }
 
 .app-cursor {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: #31809D;
   border: 0px solid #31809D;
@@ -66,7 +68,7 @@ select:-webkit-autofill:focus {
   pointer-events: none;
   overflow: hidden;
   transform: translate3d(0,0,0);
-  transition: transform .1s, width .6s, height .6s, background-color .6s;
+  transition: transform .15s, width .6s, height .6s, background-color .6s;
 }
 
 .app-cursor2 {
@@ -81,7 +83,13 @@ select:-webkit-autofill:focus {
   pointer-events: none;
   overflow: hidden;
   transform: translate3d(0,0,0);
-  transition: transform .1s, width .2s, height .2s, background-color .2s;
+  transition: transform .15s, width .2s, height .2s, background-color .2s;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
 }
 
 
@@ -135,7 +143,7 @@ select:-webkit-autofill:focus {
     --s: 1.563rem;
     --xs: 1.25rem;
     --xxs: 1.1rem;
-    --menu-font: 3.2rem;
+    --menu-font: 4.2rem;
   
     --padding-nav: 20px 45px;
     --padding-regular: 100px 45px;
@@ -153,7 +161,7 @@ select:-webkit-autofill:focus {
     --s: 1.563rem;
     --xs: 1.25rem;
     --xxs: 1.1rem;
-    --menu-font: 2.2rem;
+    --menu-font: 2rem;
   
     --padding-nav: 20px 45px;
     --padding-regular: 75px 20px;
@@ -201,6 +209,29 @@ select:-webkit-autofill:focus {
 .xxxl {
   font-size: var(--xxxl);
   font-weight: 800;
+}
+
+.type {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  line-height: 5.2rem;
+}
+
+@media screen and (max-width: 1100px) { 
+.menu_text {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  line-height: 5.2rem;
+}
+
+
+.menu_chars {
+  transform: translateY(100%);
+  transition: transform .5s;
+}
+}
+
+.char {
+  transform: translateY(100%);
+  transition: transform .5s;
 }
 
 /* Flex class */
