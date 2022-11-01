@@ -1,10 +1,9 @@
-import { useEffect, useLayoutEffect, useRef} from 'react'
+import { useLayoutEffect, useRef} from 'react'
 import projects from '../../json/projects.json'
 import projectsEs from '../../json/projects_es.json'
 import Project from '../Project'
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import SplitType from 'split-type';
 import { useTranslation } from 'react-i18next';
 gsap.registerPlugin(ScrollTrigger);
 

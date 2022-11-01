@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
 import project from '../json/projectContent.json'
 import { FaGithub } from 'react-icons/fa'
@@ -7,7 +7,6 @@ import greensock from '../images/greensock.png'
 import netlify from '../images/netlify.png'
 import graph from '../images/graphql.png'
 
-const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
 const ProjectPage = () => {
 
@@ -29,12 +28,6 @@ const ProjectPage = () => {
                 <FaGithub className='page_icon'/> Github
               </a>
           </button>
-        </div>
-        <div className='spline_container'>
-          <Suspense fallback={<div className='spline_loader'>Loading...</div>}>
-            <Spline className='spline' scene="https://prod.spline.design/bqXvmCzxW1ubnq0B/scene.splinecode" />
-            <span className='page_bgSpan'>Web <br /> Design </span>
-          </Suspense>
         </div>
       </div>
       <div className='page_tech'>

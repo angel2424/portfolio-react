@@ -1,5 +1,4 @@
 import React, { useRef} from 'react'
-import { useState } from 'react'
 import { FaArrowDown } from 'react-icons/fa'
 import { gsap } from "gsap";
 import SplitType from 'split-type'
@@ -11,7 +10,6 @@ const Hero = () => {
   const { t } = useTranslation();
 
   const handRef = useRef(null)
-  const hero = useRef(null)
 
   React.useEffect(() => {
       document.addEventListener('mousemove', (e) => {
@@ -33,6 +31,7 @@ const Hero = () => {
 
   React.useLayoutEffect(() => {
 
+    // eslint-disable-next-line no-unused-vars
     const text = new SplitType('.type')
 
     // -- ANIMATION CODE HERE --

@@ -3,12 +3,7 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import {FaInstagram, FaFacebookSquare,FaGithub} from 'react-icons/fa'
 import SplitType from "split-type";
 import logo from '../images/logo_icon.svg'
-import { useTranslation, Trans } from 'react-i18next';
-
-const lngs = {
-  en: { nativeName: 'EN' },
-  es: { nativeName: 'ES' }
-};
+import { useTranslation} from 'react-i18next';
 
 const Header = () => {
 
@@ -30,6 +25,7 @@ const Header = () => {
 
   useLayoutEffect(() => {
 
+    // eslint-disable-next-line no-unused-vars
     const text = new SplitType('.menu_text', {charClass: 'menu_chars'})
 
     // -- ANIMATION CODE HERE --
