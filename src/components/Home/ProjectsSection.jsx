@@ -1,18 +1,22 @@
-import { useEffect, useRef} from 'react'
+import { useEffect, useLayoutEffect, useRef} from 'react'
 import projects from '../../json/projects.json'
+import projectsEs from '../../json/projects_es.json'
 import Project from '../Project'
-
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SplitType from 'split-type';
+import { useTranslation } from 'react-i18next';
 gsap.registerPlugin(ScrollTrigger);
 
 
 const ProjectsSection = () => {
 
-  const boxRef = useRef();
-  const tl = useRef();
+  const { t, i18n } = useTranslation();
 
-  useEffect(() => {
+  const boxRef = useRef();
+  const sectionTl = useRef();
+
+  useLayoutEffect(() => {
 
     // -- ANIMATION CODE HERE --
 
@@ -21,13 +25,23 @@ const ProjectsSection = () => {
       // all our animations can use selector text like ".box" 
       // and it's properly scoped to our component
 
-      tl.current = gsap.timeline()
-      .to(".box", {
-        rotate: 360
+      sectionTl.current = gsap.timeline()
+      .to(".title-anim", {
+        y: 0,
+        delay: .1,
+        duration: .3,
+        scrollTrigger: {
+          trigger: '.projects',
+          end: '200px'
+        }
       })
-      .to(".circle", {
-        x: 100
-      });
+      .to(".projects-anim", {
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.projects-anim',  
+        }
+      })
 
     }, boxRef); // <- IMPORTANT! Scopes selector text
     
@@ -40,18 +54,25 @@ const ProjectsSection = () => {
 
   return (
     <div className='projects_section' ref={boxRef}>
-        <h1 className='xl'>My favorite work</h1>
+        <h1 className='xl title'><span className='title-anim'>{t('work.title')}</span></h1>
 
-        <div className={'projects flex'}>
-          {projects.map((project, index) => (
-            index < 2 &&
-              <Project key={project.id} img={project.img} title={project.title} link={`/project/${project.slug}`}/>
-          ))}
+        <div className={'projects projects-anim flex'}>
+          {
+            i18n.language === 'es' ? projectsEs.map((project, index) => (
+              index < 2 &&
+                <Project key={project.id} img={project.img} title={project.title} link={`/project/${project.slug}`}/>
+            )) 
+          :
+            projects.map((project, index) => (
+              index < 2 &&
+                <Project key={project.id} img={project.img} title={project.title} link={`/project/${project.slug}`}/>
+            )) 
+        }
         </div>
         <div className='projects_sectionButton'>
           <button className='button xs'>
             <a className='button_link flex jc-c ai-c' href="/portfolio">
-              View more of my work
+              {t('work.button')}
             </a>
           </button>
         </div>

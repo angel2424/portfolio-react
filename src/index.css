@@ -35,12 +35,40 @@ code {
     monospace;
 }
 
+#root {
+  overflow: hidden;
+}
+
 .logo {
   transition: ease .3s;
+  display: flex;
+  align-items: center;
 }
 
 .logo:hover {
   color: var(--accent-color2);
+}
+
+.logo img {
+  width: 50px;
+  height: 100%;
+  margin-right: 20px;
+  transition: linear .3s;
+}
+
+.logo span{
+ opacity: 1;
+ transition: ease .2s;
+}
+
+.logo--active span{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo--active img{
+  width: 70px;
+  height: 100%;
 }
 
 input:-webkit-autofill,
@@ -161,7 +189,7 @@ select:-webkit-autofill:focus {
     --s: 1.563rem;
     --xs: 1.25rem;
     --xxs: 1.1rem;
-    --menu-font: 2rem;
+    --menu-font: 2.5rem;
   
     --padding-nav: 20px 45px;
     --padding-regular: 75px 20px;
@@ -172,11 +200,13 @@ select:-webkit-autofill:focus {
 .menu-font {
   font-size: var(--menu-font);
   font-weight: 300;
+  z-index: 5;
 }
 
 .xxs {
   font-size: var(--xxs);
   font-weight: 300;
+  z-index: 5;
 }
 
 .xs {
@@ -185,30 +215,37 @@ select:-webkit-autofill:focus {
   color: #A1A1A1;
   line-height: 110%;
   letter-spacing: .8px;
+  z-index: 5;
 }
 .s {
   font-size: var(--s);
   font-weight: 500;
+  z-index: 5;
 }
 .m {
   font-size: var(--m);
   font-weight: 400;
+  z-index: 5;
 }
 .l {
   font-size: var(--l);
   font-weight: 500;
+  z-index: 5;
 }
 .xl {
   font-size: var(--xl);
   font-weight: 700;
+  z-index: 5;
 }
 .xxl {
   font-size: var(--xxl);
   font-weight: 800;
+  z-index: 5;
 }
 .xxxl {
   font-size: var(--xxxl);
   font-weight: 800;
+  z-index: 5;
 }
 
 .type {
@@ -217,9 +254,9 @@ select:-webkit-autofill:focus {
 }
 
 @media screen and (max-width: 1100px) { 
-.menu_text {
+.menu_text .line .word{
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  line-height: 5.2rem;
+  line-height: 3rem;
 }
 
 
@@ -227,11 +264,6 @@ select:-webkit-autofill:focus {
   transform: translateY(100%);
   transition: transform .5s;
 }
-}
-
-.char {
-  transform: translateY(100%);
-  transition: transform .5s;
 }
 
 /* Flex class */
@@ -561,3 +593,122 @@ select:-webkit-autofill:focus {
           animation: animate-svg-fill-9 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s both;
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.switch > span {
+  position: absolute;
+  top: 11px;
+  pointer-events: none;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+  width: 50%;
+  text-align: center;
+}
+
+input.check-toggle-round-flat:checked ~ .off {
+  color: #2F3848;
+}
+
+input.check-toggle-round-flat:checked ~ .on {
+  color: #fff;
+}
+
+.switch > span.on {
+  left: 0;
+  padding-left: 2px;
+  color: #31809D;
+}
+
+.switch > span.off {
+  right: 0;
+  padding-right: 4px;
+  color: #fff;
+}
+
+.check-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.check-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.check-toggle-round-flat + label {
+  padding: 2px;
+  width: 97px;
+  height: 35px;
+  background-color: #2F3848;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+input.check-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #2F3848;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+input.check-toggle-round-flat + label:after {
+  top: 3px;
+  left: 2px;
+  bottom: 4px;
+  right: 4px;
+  width: 48px;
+  background-color: #fff;
+  -webkit-border-radius: 52px;
+  -moz-border-radius: 52px;
+  -ms-border-radius: 52px;
+  -o-border-radius: 52px;
+  border-radius: 52px;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+
+input.check-toggle-round-flat:checked + label {
+}
+
+input.check-toggle-round-flat:checked + label:after {
+  margin-left: 44px;
+  background-color: #31809D;
+}
+
+@media screen and (max-width: 1100px){
+  .switch {
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+
+  .logo--active img{
+    width: 60px;
+  }
+}

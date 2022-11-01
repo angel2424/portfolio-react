@@ -1,0 +1,50 @@
+[
+        {
+            "id": "1",
+            "img": "goodmemx.jpg",
+            "title": "Good Memories",
+            "slug": "good-memories"
+        },
+        {
+            "id": "2",
+            "img": "wedding_invitation.jpg",
+            "title": "Invitacion digital (Demo)",
+            "slug": "wedding-website"
+        },
+        {
+            "id": "3",
+            "img": "weather_app.png",
+            "title": "Weather web app",
+            "slug": "weather-app"
+        },
+        {
+            "id": "4",
+            "img": "space_tourism.png",
+            "title": "Space Tourism",
+            "slug": "space-tourism"
+        },
+        {
+            "id": "5",
+            "img": "bookmark-landing.jpg",
+            "title": "Bookmark Landing",
+            "slug": "bookmark-landing"
+        },
+        {
+            "id": "6",
+            "img": "todo_app.jpg",
+            "title": "To-do App",
+            "slug": "todo-app"
+        },
+        {
+            "id": "7",
+            "img": "desktop-design.jpg",
+            "title": "CSS Chat Mockup",
+            "slug": "css-mockup"
+        },
+        {
+            "id": "8",
+            "img": "ecommerce_img.png",
+            "title": "E-commerce Product Page",
+            "slug": "ecommerce-product-page"
+        }
+]

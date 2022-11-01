@@ -2,11 +2,21 @@ import { gsap } from "gsap";
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import {FaInstagram, FaFacebookSquare,FaGithub} from 'react-icons/fa'
 import SplitType from "split-type";
+import logo from '../images/logo_icon.svg'
+import { useTranslation, Trans } from 'react-i18next';
+
+const lngs = {
+  en: { nativeName: 'EN' },
+  es: { nativeName: 'ES' }
+};
 
 const Header = () => {
+
+  const { t, i18n } = useTranslation();
   
   const [reversed, setReversed] = useState(true);  
   const [isOpen, setIsOpen] = useState(false)
+  const [scroll, setScroll] = useState(false)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -57,10 +67,6 @@ const Header = () => {
           delay: .02,
           duration: .02
         })
-        .to('.opacity-social', {
-          opacity: 1,
-          stagger: .1
-        }, '-=.5') 
       }
       
     }, boxRef); // <- IMPORTANT! Scopes selector text 
@@ -74,22 +80,60 @@ const Header = () => {
     }  
   }, [reversed]);
 
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 5) {
+        setScroll(true)
+      } else {
+        setScroll(false)
+      }
+    })
+  }, [])
+
+  const [isChecked, setIsChecked] = useState(false);
+
+  useEffect(() => {
+    if(i18n.language === 'es') {
+      setIsChecked(true)
+    } else {
+      setIsChecked(false)
+    }
+  }, [i18n.language])
+
+  const handleOnChange = () => {
+    setIsChecked(!isChecked);
+
+    if(isChecked === true) {}
+  };
 
   return (
         <header ref={boxRef}>
           <div className='flex jc-sb ai-c header' >
-              <a href="/" className='cursor-link opacity-anim logo s'>ardzcodes</a>
+              <a href="/" className={`cursor-link opacity-anim logo s ${scroll ? 'logo--active' : '' }`}>
+                <img className="cursor-link" src={logo} alt="" />
+                <span className="cursor-link">ardzcodes</span>
+              </a>
               <div className={`nav_container ${isOpen ? 'nav_container--active' : ''} flex ai-c jc-sb`}>
-                <nav className='nav flex'>
-                    <a className='menu-font cursor-link opacity-anim menu_text' href="/#about">About</a>
-                    <a className='menu-font cursor-link opacity-anim menu_text' href="/portfolio">Portfolio</a>
-                    <a className='menu-font cursor-link opacity-anim menu_text' href="#contact">Let's work together!</a>
+                <nav className='nav flex ai-c'>
+                    <a className='menu-font cursor-link opacity-anim menu_text' onClick={toggleMenu} href="/#about">{t('header.about')}</a>
+                    <a className='menu-font cursor-link opacity-anim menu_text' onClick={toggleMenu} href="/portfolio">{t('header.portfolio')}</a>
+                    <a className='menu-font cursor-link opacity-anim menu_text' onClick={toggleMenu} href="#contact">{t('header.contact')}</a>
                 </nav>
                 <div className='nav_icons flex cursor-link opacity-anim'>
                     <a target='_blank' rel='noreferrer' href="https://www.instagram.com/a.rdzcodes24/" ><FaInstagram size={23} /></a>
                     <a href="/" ><FaFacebookSquare size={23} /></a>
                     <a target='_blank' rel='noreferrer' href="https://github.com/angel2424" ><FaGithub size={23} /></a>
                 </div>
+                <center>
+                  <div class="switch">
+                    <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox" checked={isChecked}
+                      onChange={handleOnChange} onClick={() => isChecked ? i18n.changeLanguage('en') : i18n.changeLanguage('es')}></input>
+                    <label for="language-toggle" ></label>
+                    {console.log(i18n.language)}
+                    <span class="on">EN</span>
+                    <span class="off">ES</span>
+                  </div>
+                </center>
               </div>
               <div className={`hamburger cursor-link opacity-anim ${isOpen ? 'hamburger--active' : ''}`} onClick={toggleMenu}>
                 <span className='bar cursor-link'></span>

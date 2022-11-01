@@ -3,9 +3,12 @@ import { useState } from 'react'
 import { FaArrowDown } from 'react-icons/fa'
 import { gsap } from "gsap";
 import SplitType from 'split-type'
+import { useTranslation } from 'react-i18next';
 
 
 const Hero = () => {
+
+  const { t } = useTranslation();
 
   const handRef = useRef(null)
   const hero = useRef(null)
@@ -46,14 +49,10 @@ const Hero = () => {
         delay: .1,
         duration: .1
       })
-      .from('.bg-opacity-anim', {
-        opacity: 0,
-        duration: 3.5,
-      })
       .to('.opacity-anim', {
         opacity: 1,
         duration: 1
-      }, '-=3.5')
+      }, '-=.5')
 
     }, el); // <- IMPORTANT! Scopes selector text
     
@@ -65,13 +64,13 @@ const Hero = () => {
   return (
     <div className='hero' ref={el}>
       <div className='hero_text flex direction-c jc-c ai-c'>
-        <h2 className='m opacity-anim'>Hello World! I'm Angel <span className='hand' ref={handRef}>👋</span></h2>
-        <h1 className='xxxl type' ref={type}>Front-end Web Developer</h1> 
-        <h2 className='m opacity-anim'>Based in Piedras Negras, Coahuila, Mexico</h2>
+        <h2 className='m opacity-anim'>{t('hero.hello')}<span className='hand' ref={handRef}>👋</span></h2>
+        <h1 className='xxxl type' ref={type}>{t('hero.role')}</h1> 
+        <h2 className='m opacity-anim'>{t('hero.location')}</h2>
         
         <button className='button xs opacity-anim'>
           <a className='button_link flex jc-c ai-c' href="/">
-            About me
+            {t('hero.button')}
           </a>
         </button>
         
