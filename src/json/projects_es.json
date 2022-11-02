@@ -3,7 +3,9 @@
             "id": "1",
             "img": "goodmemx.jpg",
             "title": "Good Memories",
-            "slug": "good-memories"
+            "slug": "good-memories",
+            "description" : "Disenado and developed a website for a small wedding photography and video business in my city.",
+            "tech": ["React", "Next JS", "Hygraph CMS"]
         },
         {
             "id": "2",

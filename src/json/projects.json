@@ -3,13 +3,19 @@
             "id": "1",
             "img": "goodmemx.jpg",
             "title": "Good Memories",
-            "slug": "good-memories"
+            "slug": "good-memories",
+            "description" : "Designed and developed a website for a small wedding photography and video business in my city.",
+            "tech": ["React", "Next JS", "Hygraph CMS"],
+            "live": "https://goodmemx.com",
+            "github": ""
         },
         {
             "id": "2",
             "img": "wedding_invitation.jpg",
             "title": "Wedding website (Demo)",
-            "slug": "wedding-website"
+            "slug": "wedding-website",
+            "live": "https://johnysarah.goodmemx.com",
+            "github": "https://github.com/angel2424/johnandsarah-site"
         },
         {
             "id": "3",

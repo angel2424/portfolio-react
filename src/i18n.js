@@ -32,7 +32,13 @@ i18n
             },
             work: {
                 title: 'My favorite work',
+                projectButton1: "Live Website",
+                projectButton2: "Github",
                 button: 'View more of my work'     
+            },
+            about: {
+                title: 'About Me',
+                text: 'Hello there, I\'m Angel Rodriguez, an entry-level front-end developer with a background in customer service. I enjoyed solving problems for clients in all types of situations, that\'s why web development was a no-brainer for me. I want to work in a company where I can receive mentorship and grow professionally as a developer. Also meeting people that are as passionate as I am is a must 😊.'     
             }
         }
       },
@@ -51,8 +57,14 @@ i18n
             },
             work: {
                 title: 'Mi trabajo favorito',
-                button: 'Conoce mas de mi trabajo'          
-            }
+                projectButton1: "Live Website",
+                projectButton2: "Github",
+                button: 'Conoce mas de mi trabajo'      
+            },
+            about: {
+              title: 'Acerca de Mi',
+              text: 'Hello there, I\'m Angel Rodriguez, an entry-level front-end developer with a background in customer service. I enjoyed solving problems for clients in all types of situations, that\'s why web development was a no-brainer for me. I want to work in a company where I can receive mentorship and grow professionally as a developer. Also meeting people that are as passionate as I am is a must 😊.'     
+          }
         }
       }
     }

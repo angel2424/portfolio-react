@@ -1,14 +1,42 @@
-import React from 'react'
+import { useTranslation } from 'react-i18next';
 
-const Project = ( { title, img, alt, link } ) => {
+const Project = ( { title, img, alt, description, tech, live, github } ) => {
+
+  const { t } = useTranslation();
+
   return (
-    <div className='project cursor-link'>
-        <a href={link}>
-            <div className='project_imgContainer cursor-link'>
-                <img className='cursor-link' src={img} alt={alt}/>
-            </div>
-            <h4 className='xs cursor-link'>{title}</h4>
-        </a>
+    <div className='project'>
+      <div className='project_imgContainer cursor-link'>
+          <span className='project_imgOverlay'>
+            <button className='button xs'>
+              <a target='_blank' rel="noreferrer" className='button_link flex jc-c ai-c' href={live}>
+                {t('work.projectButton1')}
+              </a>
+            </button>              
+            {
+              github === "" ?
+                null              
+              : 
+                <button className='button xs'>
+                  <a target='_blank' rel="noreferrer" className='button_link flex jc-c ai-c' href={github}>
+                    {t('work.projectButton2')}
+                  </a>
+                </button>                
+            }
+          </span>
+          <img className='cursor-link' src={img} alt={alt}/>
+      </div>
+      <div className='project_textContainer'>
+        <h4 className='xs'>{title}</h4>
+        <p className='xs'>{description}</p>
+        <div className='project_tech'>
+          {
+            tech?.map(skill => (
+              <span>{skill}</span>
+            ))
+          }
+        </div>
+      </div>
     </div>
   )
 }

@@ -16,7 +16,6 @@ const Home = () => {
 
     // -- ANIMATION CODE HERE --
 
-
     let ctx = gsap.context(() => {
     
       // all our animations can use selector text like ".box" 
@@ -30,7 +29,6 @@ const Home = () => {
     }, el); // <- IMPORTANT! Scopes selector text
 
     return () => ctx.revert(); // cleanup
-    
 
   }, [])
 

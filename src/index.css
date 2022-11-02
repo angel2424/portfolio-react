@@ -654,10 +654,10 @@ input.check-toggle-round-flat + label {
   height: 35px;
   background-color: #2F3848;
   -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
-  -ms-border-radius: 60px;
-  -o-border-radius: 60px;
-  border-radius: 60px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
 }
 input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
   display: block;
@@ -671,10 +671,10 @@ input.check-toggle-round-flat + label:before {
   bottom: 2px;
   right: 2px;
   background-color: #2F3848;
-  -moz-border-radius: 60px;
-  -ms-border-radius: 60px;
-  -o-border-radius: 60px;
-  border-radius: 60px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
 }
 input.check-toggle-round-flat + label:after {
   top: 3px;
@@ -683,11 +683,11 @@ input.check-toggle-round-flat + label:after {
   right: 4px;
   width: 48px;
   background-color: #fff;
-  -webkit-border-radius: 52px;
-  -moz-border-radius: 52px;
-  -ms-border-radius: 52px;
-  -o-border-radius: 52px;
-  border-radius: 52px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
   -webkit-transition: margin 0.2s;
   -moz-transition: margin 0.2s;
   -o-transition: margin 0.2s;

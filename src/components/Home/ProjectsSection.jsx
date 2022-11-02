@@ -34,11 +34,13 @@ const ProjectsSection = () => {
           end: '200px'
         }
       })
-      .to(".projects-anim", {
+      .to(".project", {
         opacity: 1,
-        duration: 1,
+        duration: .8,
+        stagger: .5,
         scrollTrigger: {
-          trigger: '.projects-anim',  
+          trigger: '.project',
+          end: 'bottom top'
         }
       })
 
@@ -55,16 +57,16 @@ const ProjectsSection = () => {
     <div className='projects_section' ref={boxRef}>
         <h1 className='xl title'><span className='title-anim'>{t('work.title')}</span></h1>
 
-        <div className={'projects projects-anim flex'}>
+        <div className={'projects flex'}>
           {
             i18n.language === 'es' ? projectsEs.map((project, index) => (
               index < 2 &&
-                <Project key={project.id} img={project.img} title={project.title} link={`/project/${project.slug}`}/>
+                <Project key={project?.id} img={project?.img} title={project?.title} description={project?.description} tech={project?.tech} live={project?.live} github={project?.github}/>
             )) 
           :
             projects.map((project, index) => (
               index < 2 &&
-                <Project key={project.id} img={project.img} title={project.title} link={`/project/${project.slug}`}/>
+                <Project key={project?.id} img={project?.img} title={project?.title} description={project?.description} tech={project?.tech} live={project?.live} github={project?.github}/>
             )) 
         }
         </div>
