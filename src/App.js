@@ -6,7 +6,6 @@ import Portfolio from './pages/Portfolio';
 import CustomCursor from './components/CustomCursor';
 import { useLayoutEffect, useState } from 'react';
 import Loader from './components/Loader';
-import ProjectPage from './pages/ProjectPage';
 import Footer from './components/Footer'
  
 function App() {
@@ -30,7 +29,6 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home />}/>
         <Route exact path='/portfolio' element={<Portfolio />}/>
-        <Route path='/project/:slug' element={<ProjectPage />}/>
       </Routes>
       <Footer />
     </>

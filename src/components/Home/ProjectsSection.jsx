@@ -13,7 +13,6 @@ const ProjectsSection = () => {
   const { t, i18n } = useTranslation();
 
   const boxRef = useRef();
-  const sectionTl = useRef();
 
   useLayoutEffect(() => {
 
@@ -24,8 +23,7 @@ const ProjectsSection = () => {
       // all our animations can use selector text like ".box" 
       // and it's properly scoped to our component
 
-      sectionTl.current = gsap.timeline()
-      .to(".title-anim", {
+      gsap.to(".title-anim", {
         y: 0,
         delay: .1,
         duration: .3,
@@ -34,13 +32,41 @@ const ProjectsSection = () => {
           end: '200px'
         }
       })
-      .to(".project", {
+      gsap.to(".project", {
         opacity: 1,
-        duration: .8,
-        stagger: .5,
+        duration: .3,
+        stagger: .3,
         scrollTrigger: {
           trigger: '.project',
           end: 'bottom top'
+        }
+      })
+      gsap.to(".projects_sectionButton .button", {
+        opacity: 1,
+        duration: .3,
+        scrollTrigger: {
+          trigger: '.projects_sectionButton .button'
+        }
+      })
+      gsap.from('.project_textContainer h4', {
+        opacity: 0,
+        duration: .4,
+        scrollTrigger: {
+          trigger: '.project_textContainer h4'
+        }
+      })
+      gsap.from('.project_textContainer p', {
+        opacity: 0,
+        duration: .4,
+        scrollTrigger: {
+          trigger: '.project_textContainer p'
+        }
+      })
+      gsap.from('.project_tech', {
+        opacity: 0,
+        duration: .4,
+        scrollTrigger: {
+          trigger: '.project_tech'
         }
       })
 

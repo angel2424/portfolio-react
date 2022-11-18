@@ -20,7 +20,7 @@ header {
 }
 
 .opacity-anim {
-  opacity: 0;
+  opacity: 1;
 }
 
 .nav_container {
@@ -152,7 +152,9 @@ header {
 }
 
 .projects_section button {
+  height: 50px;
   width: 350px;
+  opacity: 0;
 }
 
 .title {
@@ -165,6 +167,16 @@ header {
   transform: translate(0, 100%);
   transition: transform .5s;
 }
+.text {
+  overflow: hidden;
+  line-height: 1;
+}
+
+.text-anim {
+  display: block;
+  transform: translate(0, 100%);
+  transition: transform .5s;
+}
 
 
 /* Project component */
@@ -172,13 +184,14 @@ header {
 .project {
   transition: ease .4s;
   width: 100%;
+  height: fit-content;
   opacity: 0;
   transition: opacity ease .8s;
 }
 
 .project_imgContainer {
   object-fit: cover;
-  height: fit-content;
+  max-height: 500px;
   position: relative;
 }
 
@@ -209,6 +222,10 @@ header {
   opacity: 1;
 }
 
+.project_imgOverlay .button{
+  opacity: 1;
+}
+
 .project_textContainer {
   padding: 10px 5px;
 }
@@ -222,6 +239,8 @@ header {
 
 .project_tech {
   padding: 30px 0;
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
 
 .project_tech span{
@@ -761,6 +780,12 @@ header {
 
   .project {
     margin-bottom: 0px;
+  }
+
+  .project_imgContainer {
+    object-fit: cover;
+    height: 250px;
+    position: relative;
   }
 
   .about_text button, .projects_section button {

@@ -26,7 +26,6 @@ const Header = () => {
   useLayoutEffect(() => {
 
     // eslint-disable-next-line no-unused-vars
-    const text = new SplitType('.menu_text', {charClass: 'menu_chars'})
 
     // -- ANIMATION CODE HERE --
 
@@ -40,10 +39,16 @@ const Header = () => {
           y: -100,
           opacity: 1
         })
+        .to(".title-anim", {
+          y: 0,
+          stagger: .2,
+          delay: .1,
+          duration: .3,
+        })
         .to('.opacity-anim', {
           opacity: 1,
           stagger: .1
-        }, '-=.5') 
+        }, '-=2') 
       } else if (window.innerWidth < 1100){
         headerTl.current = gsap.timeline()
         .from('.header', {
@@ -57,13 +62,24 @@ const Header = () => {
           x: 0,
           ease: 'sine'
         })
-        .to(".menu_chars", {
+        .to(".title-anim", {
           y: 0,
-          stagger: 0.02,
-          delay: .02,
-          duration: .02
+          stagger: .2,
+          delay: .1,
+          duration: .3,
+        })
+        .from('.nav_icons', {
+          opacity: 0,
+          duration: .3,
+          ease: 'power2.out'
+        })
+        .from('.switch', {
+          opacity: 0,
+          duration: .3,
+          ease: 'power2.out'
         })
       }
+      
       
     }, boxRef); // <- IMPORTANT! Scopes selector text 
     
@@ -111,9 +127,8 @@ const Header = () => {
               </a>
               <div className={`nav_container ${isOpen ? 'nav_container--active' : ''} flex ai-c jc-sb`}>
                 <nav className='nav flex ai-c'>
-                    <a className='menu-font cursor-link opacity-anim menu_text' onClick={toggleMenu} href="/#about">{t('header.about')}</a>
-                    <a className='menu-font cursor-link opacity-anim menu_text' onClick={toggleMenu} href="/portfolio">{t('header.portfolio')}</a>
-                    <a className='menu-font cursor-link opacity-anim menu_text' onClick={toggleMenu} href="#contact">{t('header.contact')}</a>
+                    <a className='menu-font cursor-link opacity-anim title' onClick={toggleMenu} href="/portfolio"><span className="title-anim">{t('header.portfolio')}</span></a>
+                    <a className='menu-font cursor-link opacity-anim title' onClick={toggleMenu} href="#contact"><span className="title-anim">{t('header.contact')}</span></a>
                 </nav>
                 <div className='nav_icons flex cursor-link opacity-anim'>
                     <a target='_blank' rel='noreferrer' href="https://www.instagram.com/a.rdzcodes24/" ><FaInstagram size={23} /></a>

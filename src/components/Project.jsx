@@ -1,11 +1,12 @@
 import { useTranslation } from 'react-i18next';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Project = ( { title, img, alt, description, tech, live, github } ) => {
 
   const { t } = useTranslation();
 
   return (
-    <div className='project'>
+    <div className='project' onLoad={ScrollTrigger.refresh()}>
       <div className='project_imgContainer cursor-link'>
           <span className='project_imgOverlay'>
             <button className='button xs'>
@@ -29,7 +30,7 @@ const Project = ( { title, img, alt, description, tech, live, github } ) => {
       <div className='project_textContainer'>
         <h4 className='xs'>{title}</h4>
         <p className='xs'>{description}</p>
-        <div className='project_tech'>
+        <div className='project_tech flex'>
           {
             tech?.map(skill => (
               <span>{skill}</span>

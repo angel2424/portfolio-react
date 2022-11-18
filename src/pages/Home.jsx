@@ -6,6 +6,7 @@ import ProjectsSection from '../components/Home/ProjectsSection'
 import Skills from '../components/Home/Skills'
 import { gsap } from "gsap";
 import { Helmet } from "react-helmet";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Home = () => {
 
@@ -29,8 +30,12 @@ const Home = () => {
     }, el); // <- IMPORTANT! Scopes selector text
 
     return () => ctx.revert(); // cleanup
-
+    
   }, [])
+  
+  React.useLayoutEffect(() => {
+    ScrollTrigger.refresh()
+  })
 
   return (
     <>

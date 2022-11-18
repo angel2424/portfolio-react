@@ -4,7 +4,7 @@
             "img": "goodmemx.jpg",
             "title": "Good Memories",
             "slug": "good-memories",
-            "description" : "Designed and developed a website for a small wedding photography and video business in my city.",
+            "description" : "Web design and development for a small wedding photography and video business in my city. The main goal was to showcase all their work and service packages, as well as share their vision with their clients all throughout the site.",
             "tech": ["React", "Next JS", "Hygraph CMS"],
             "live": "https://goodmemx.com",
             "github": ""
@@ -14,6 +14,8 @@
             "img": "wedding_invitation.jpg",
             "title": "Wedding website (Demo)",
             "slug": "wedding-website",
+            "description" : "Design and development for a wedding website template in colaboration with Good Memories. the wedding websites are sites where couples will display information about their wedding, and where guests will be able to RSVP directly on the site and the couple will receive a Google Sheets file that updates in realtime.",
+            "tech": ["HTML", "CSS", "Zapier", "Netlify", "Netlify Forms"],
             "live": "https://johnysarah.goodmemx.com",
             "github": "https://github.com/angel2424/johnandsarah-site"
         },
