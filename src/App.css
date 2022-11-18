@@ -191,7 +191,7 @@ header {
 
 .project_imgContainer {
   object-fit: cover;
-  max-height: 500px;
+  max-height: 600px;
   position: relative;
 }
 
@@ -216,6 +216,7 @@ header {
   justify-content: center;
   opacity: 0;
   transition: ease .3s;
+
 }
 
 .project_imgContainer:hover .project_imgOverlay{
@@ -602,7 +603,7 @@ header {
     width: 100%;
     z-index: 100;
     background-color: #12121C;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     transform: translateX(100%);
     transition: transform .3s;
@@ -613,7 +614,8 @@ header {
   .nav {
     flex-direction: column;
     justify-content: center;
-    height: 90vh;
+    align-items: center;
+    margin-right: 0;
     transition: ease .3s;
   }
 
@@ -657,6 +659,24 @@ header {
   .project {
     margin-bottom: 40px;
     max-width: 100%;
+  }
+
+  .project_imgContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    max-height: 700px;
+  }
+
+  .project_imgOverlay {
+    position: relative;
+    opacity: 1;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
   }
 
   .projects {
@@ -747,13 +767,18 @@ header {
     padding: 20px;
   }
 
+  .nav {
+    margin: 50px 0;
+  }
+
   .nav a {
     line-height: 3rem;
     text-align: center;
+    margin: 20px 0;
   }
 
   .hero {
-    padding: 0 20px;
+    padding: 0 8px;
   }
 
   .line {
@@ -784,8 +809,21 @@ header {
 
   .project_imgContainer {
     object-fit: cover;
-    height: 250px;
+    max-height: 600px;
     position: relative;
+  }
+
+  .project_imgOverlay {
+    position: relative;
+    opacity: 1;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 10px;
   }
 
   .about_text button, .projects_section button {
@@ -844,6 +882,19 @@ header {
     clip-path: none;
     scale: 2;
   }
+
+  .layer_2 {
+    position: absolute;
+    top: 50%;
+    left: -45%;
+    background-image: url(../public/circle-02.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: none;
+    -webkit-clip-path: none;
+    clip-path: none;
+    scale: 1.2;
+  } 
 
 }
 
