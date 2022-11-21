@@ -23,7 +23,9 @@
             "id": "3",
             "img": "weather_app.png",
             "title": "Weather web app",
-            "slug": "weather-app"
+            "slug": "weather-app",
+            "description": "This is a project inspired by a Front end Mentor challenge. Design inspired by Arthur K's minimalist weather app concept. Developed with React JS and using the Weather Api",
+            "tech": ["React JS", "Weather Api"]
         },
         {
             "id": "4",
