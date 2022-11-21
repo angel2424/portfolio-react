@@ -23,7 +23,8 @@
             "id": "3",
             "img": "weather_app.png",
             "title": "Weather web app",
-            "slug": "weather-app"
+            "slug": "weather-app",
+            "description": "This is a project inspired by a Front end Mentor challenge. I designed and developed the concept weather app with React JS and using the Open Weather api"    
         },
         {
             "id": "4",
