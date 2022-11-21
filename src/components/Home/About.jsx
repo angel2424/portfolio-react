@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import about from '../../images/about.jpg'
 import { gsap } from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger'; // eslint-disable no-unused-vars
 import { useLayoutEffect, useRef } from 'react';
 
 const About = () => {

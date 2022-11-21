@@ -4,14 +4,13 @@ import projects from '../json/projects.json'
 import projectsEs from '../json/projects_es.json'
 import { Helmet } from "react-helmet";
 import { useTranslation } from 'react-i18next';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { gsap } from "gsap";
 import Contact from '../components/Contact'
 
 
 const Portfolio = () => {
 
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const boxRef = useRef();
 

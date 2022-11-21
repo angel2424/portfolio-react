@@ -87,12 +87,12 @@ const ProjectsSection = () => {
           {
             i18n.language === 'es' ? projectsEs.map((project, index) => (
               index < 2 &&
-                <Project key={project?.id} img={project?.img} title={project?.title} description={project?.description} tech={project?.tech} live={project?.live} github={project?.github}/>
+                <Project index={index} img={project?.img} title={project?.title} description={project?.description} tech={project?.tech} live={project?.live} github={project?.github}/>
             )) 
           :
             projects.map((project, index) => (
               index < 2 &&
-                <Project key={project?.id} img={project?.img} title={project?.title} description={project?.description} tech={project?.tech} live={project?.live} github={project?.github}/>
+                <Project index={index} img={project?.img} title={project?.title} description={project?.description} tech={project?.tech} live={project?.live} github={project?.github}/>
             )) 
         }
         </div>

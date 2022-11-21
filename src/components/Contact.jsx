@@ -1,5 +1,4 @@
 import { gsap } from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger'; // eslint-disable no-unused-vars
 import React, { useLayoutEffect, useRef } from 'react';
 
 const Contact = () => {

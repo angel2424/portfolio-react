@@ -5,7 +5,6 @@ import sass from '../../images/sass.png'
 import npm from '../../images/npm.png'
 import github from '../../images/github.png'
 import { gsap } from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger'; // eslint-disable no-unused-vars
 import { useLayoutEffect, useRef } from 'react';
 
 const Skills = () => {

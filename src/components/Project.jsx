@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const Project = ( { title, img, alt, description, tech, live, github } ) => {
+const Project = ( { title, img, alt, description, tech, live, github, index } ) => {
 
   const { t } = useTranslation();
 
   return (
-    <div className='project' onLoad={ScrollTrigger.refresh()}>
+    <div key={index} className='project' onLoad={ScrollTrigger.refresh()}>
       <div className='project_imgContainer cursor-link'>
-          <span className='project_imgOverlay'>
+          <span className=', key'>
             <button className='button xs'>
               <a target='_blank' rel="noreferrer" className='button_link flex jc-c ai-c' href={live}>
                 {t('work.projectButton1')}
@@ -32,8 +32,8 @@ const Project = ( { title, img, alt, description, tech, live, github } ) => {
         <p className='xs'>{description}</p>
         <div className='project_tech flex'>
           {
-            tech?.map(skill => (
-              <span>{skill}</span>
+            tech?.map((skill, index) => (
+              <span key={index}>{skill}</span>
             ))
           }
         </div>

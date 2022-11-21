@@ -1,7 +1,6 @@
 import { gsap } from "gsap";
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import {FaInstagram, FaFacebookSquare,FaGithub} from 'react-icons/fa'
-import SplitType from "split-type";
 import logo from '../images/logo_icon.svg'
 import { useTranslation} from 'react-i18next';
 
@@ -35,9 +34,10 @@ const Header = () => {
       // and it's properly scoped to our component
       if(window.innerWidth > 1100) {
         headerTl.current = gsap.timeline()
-        .from('header', {
+        .from(".header", {
           y: -100,
-          opacity: 1
+          opacity: 1,
+          duration: .7
         })
         .to(".title-anim", {
           y: 0,
@@ -120,7 +120,7 @@ const Header = () => {
 
   return (
         <header ref={boxRef}>
-          <div className='flex jc-sb ai-c header' >
+          <div className='flex jc-sb ai-c header'>
               <a href="/" className={`cursor-link opacity-anim logo s ${scroll ? 'logo--active' : '' }`}>
                 <img className="cursor-link" src={logo} alt="" />
                 <span className="cursor-link">ardzcodes</span>
@@ -140,7 +140,6 @@ const Header = () => {
                     <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox" checked={isChecked}
                       onChange={handleOnChange} onClick={() => isChecked ? i18n.changeLanguage('en') : i18n.changeLanguage('es')}></input>
                     <label for="language-toggle" ></label>
-                    {console.log(i18n.language)}
                     <span class="on">EN</span>
                     <span class="off">ES</span>
                   </div>
