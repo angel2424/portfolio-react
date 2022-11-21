@@ -8,7 +8,7 @@ const Project = ( { title, img, alt, description, tech, live, github, index } ) 
   return (
     <div key={index} className='project' onLoad={ScrollTrigger.refresh()}>
       <div className='project_imgContainer cursor-link'>
-          <span className=', key'>
+          <span className='project_imgOverlay'>
             <button className='button xs'>
               <a target='_blank' rel="noreferrer" className='button_link flex jc-c ai-c' href={live}>
                 {t('work.projectButton1')}
