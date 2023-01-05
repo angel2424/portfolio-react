@@ -5,8 +5,3 @@
 
 [dev]
   command = "npm start"
-
-[build]
-  command = "npm generate"
-  publish = "dist"
-  functions = "functions"
