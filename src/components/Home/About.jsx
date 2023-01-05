@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import about from '../../images/about.jpg'
+import about from '../../images/about_me_portrait.jpg'
 import { gsap } from "gsap";
 import { useLayoutEffect, useRef } from 'react';
 

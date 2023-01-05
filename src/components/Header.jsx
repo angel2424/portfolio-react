@@ -1,16 +1,20 @@
-import { gsap } from "gsap";
+import { gsap } from "gsap/dist/gsap";
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import {FaInstagram, FaFacebookSquare,FaGithub} from 'react-icons/fa'
 import logo from '../images/logo_icon.svg'
 import { useTranslation} from 'react-i18next';
 
+const useIsomorphicLayoutEffect = typeof window !== "undefined" 
+  ? useLayoutEffect 
+  : useEffect;
+
 const Header = () => {
 
   const { t, i18n } = useTranslation();
   
-  const [reversed, setReversed] = useState(true);  
   const [isOpen, setIsOpen] = useState(false)
   const [scroll, setScroll] = useState(false)
+  const [reversed, setReversed] = useState(true);  
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -22,7 +26,7 @@ const Header = () => {
   const headerTl = useRef();
   const menuTl = useRef();
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
 
     // eslint-disable-next-line no-unused-vars
 
@@ -88,7 +92,7 @@ const Header = () => {
   
   useEffect(() => {  
     if (window.innerWidth < 1100){
-      menuTl.current.reversed(reversed);
+      menuTl?.current.reversed(reversed);
     }  
   }, [reversed]);
 
