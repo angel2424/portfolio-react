@@ -237,6 +237,7 @@ select:-webkit-autofill:focus {
 .xl {
   font-size: var(--fs-48);
   font-weight: 700;
+  line-height: var(--fs-48);
   z-index: 5;
   position: relative;
 }

@@ -22,7 +22,7 @@ function App() {
     }, 2700)
   }, [])
 
-  const [ theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
+  const [ theme, setTheme] = useLocalStorage('theme', 'dark')
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')

@@ -170,7 +170,7 @@ const Header = () => {
                       <span class="on">EN</span>
                       <span class="off">ES</span>
                     </div>
-                  <button className="bulb cursor-link" onClick={toggleTheme}><img src={`${theme === 'dark' ? off : on}`} alt="" /></button>
+                  <button className="bulb cursor-link" onClick={toggleTheme}><img className='cursor-link' src={`${theme === 'dark' ? off : on}`} alt="" /></button>
                 </div>
               </div>
               <div className={`hamburger cursor-link opacity-anim ${isOpen ? 'hamburger--active' : ''}`} onClick={toggleMenu}>

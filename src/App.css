@@ -33,6 +33,11 @@ header {
   transition: ease .3s;
 }
 
+.nav_toggles {
+  display: flex;
+  align-items: center;
+}
+
 .nav_icons {
   position: relative;
 }
@@ -333,6 +338,11 @@ header {
 
 .skills h2 {
   text-align: center;
+}
+
+#light .skill h4 {
+  color: var(--secondary-color);
+  font-size: 600;
 }
 
 .skills_list {
@@ -955,7 +965,7 @@ header {
     opacity: 1;
     background-color: transparent;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 30px;
     justify-content: center;
     align-items: center;
@@ -981,13 +991,12 @@ header {
     margin: 20px 20px;
   }
 
-  .skill h4 {
-    color: var(--secondary-color);
-    font-size: 600;
-  }
-
   .about_text {
     padding: 0 15px;
+  }
+
+  #light .about_text p {
+    color: hsla(218, 21%, 23%, 0.713);
   }
 
   .contact {
@@ -1066,7 +1075,7 @@ header {
 
   .layer_3 {
     position: absolute;
-    top: 78.6%;
+    top: 80.6%;
     right: -70%;
     background-image: url(../public/circle-01-bg.svg);
     background-repeat: no-repeat;
