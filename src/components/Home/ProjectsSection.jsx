@@ -55,13 +55,6 @@ const ProjectsSection = () => {
           trigger: '.project_textContainer h4'
         }
       })
-      gsap.from('.project_textContainer p', {
-        opacity: 0,
-        duration: .4,
-        scrollTrigger: {
-          trigger: '.project_textContainer p'
-        }
-      })
       gsap.from('.project_tech', {
         opacity: 0,
         duration: .4,

@@ -20,7 +20,7 @@ i18n
       en: {
         translation: {
             header: {
-                about: 'About',
+                home: 'Home',
                 portfolio: 'Portfolio',
                 contact: 'Let\'s work together!'
             },
@@ -28,7 +28,7 @@ i18n
                 hello: 'Hello World! I\'m Angel',
                 role: 'Front-end Web Developer',
                 location: 'Based in Piedras Negras, Coahuila, Mexico',
-                button: 'About me'           
+                button: 'Let\'s work together!'        
             },
             work: {
                 title: 'My favorite work',
@@ -45,7 +45,7 @@ i18n
       es: {
         translation: {
             header: {
-                about: 'Acerca de Mi',
+                home: 'Inicio',
                 portfolio: 'Portfolio',
                 contact: '¡Trabajemos juntos!'
             },
@@ -53,7 +53,7 @@ i18n
                 hello: 'Hola Mundo! Soy Angel',
                 role: 'Desarrollador Web',
                 location: 'Ubicado en Piedras Negras, Coahuila, Mexico',
-                button: 'Acerca de mi'
+                button: '¡Trabajemos juntos!'
             },
             work: {
                 title: 'Mi trabajo favorito',

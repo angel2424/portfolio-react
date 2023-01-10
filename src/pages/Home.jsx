@@ -55,18 +55,11 @@ const Home = () => {
                   clip-rule='evenodd'/> 
           </clipPath>
         </svg> 
-        <svg xmlns="http://www.w3.org/2000/svg"  width='400' height='400' viewBox="0 0 1095 1095" className='mask_svg'>
-          <clipPath id='mask2'> 
-            <path d="M1095,547.5c0,302.38-245.12,547.5-547.5,547.5S0,849.88,0,547.5,245.12,0,547.5,0s547.5,245.12,547.5,547.5ZM547.5,28.57C260.9,28.57,28.57,260.9,28.57,547.5s232.34,518.93,518.93,518.93,518.93-232.34,518.93-518.93S834.1,28.57,547.5,28.57Z"/>
-          </clipPath>
-        </svg>
-        <div className='layer_1 bg-opacity-anim'></div>
-        <div className='layer_2 bg-opacity-anim'></div>
-        <Hero />
-        <ProjectsSection />
-        <About />
-        <Skills />
-        <Contact />
+          <Hero />
+          <ProjectsSection />
+          <About />
+          <Skills />
+          <Contact />
       </div>
     </>
   )

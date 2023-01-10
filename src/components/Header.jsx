@@ -2,7 +2,12 @@ import { gsap } from "gsap/dist/gsap";
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import {FaInstagram, FaFacebookSquare,FaGithub} from 'react-icons/fa'
 import logo from '../images/logo_icon.svg'
+import logoDark from '../images/logo_icon-dark.svg'
 import { useTranslation} from 'react-i18next';
+import { useContext } from "react";
+import { ThemeContext } from "../App";
+import on from '../images/lightbulb-on.svg'
+import off from '../images/lightbulb-off.svg'
 
 const useIsomorphicLayoutEffect = typeof window !== "undefined" 
   ? useLayoutEffect 
@@ -13,8 +18,12 @@ const Header = () => {
   const { t, i18n } = useTranslation();
   
   const [isOpen, setIsOpen] = useState(false)
+  // eslint-disable-next-line
+  const [mobile, setMobile] = useState(false)
   const [scroll, setScroll] = useState(false)
   const [reversed, setReversed] = useState(true);  
+
+  const {theme, toggleTheme} = useContext(ThemeContext)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -68,18 +77,23 @@ const Header = () => {
         })
         .to(".title-anim", {
           y: 0,
-          stagger: .2,
+          stagger: .1,
           delay: .1,
-          duration: .3,
+          duration: .1,
         })
         .from('.nav_icons', {
           opacity: 0,
-          duration: .3,
+          duration: .1,
           ease: 'power2.out'
         })
         .from('.switch', {
           opacity: 0,
-          duration: .3,
+          duration: .2,
+          ease: 'power2.out'
+        })
+        .from('.bulb', {
+          opacity: 0,
+          duration: .2,
           ease: 'power2.out'
         })
       }
@@ -106,6 +120,14 @@ const Header = () => {
     })
   }, [])
 
+  useEffect(() => {
+      if(window.innerWidth < 1100) {
+        setMobile(true)
+      } else {
+        setMobile(false)
+      }
+  }, [])
+
   const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
@@ -126,28 +148,30 @@ const Header = () => {
         <header ref={boxRef}>
           <div className='flex jc-sb ai-c header'>
               <a href="/" className={`cursor-link opacity-anim logo s ${scroll ? 'logo--active' : '' }`}>
-                <img className="cursor-link" src={logo} alt="" />
+                <img className="cursor-link" src={theme === 'dark' ? logo : logoDark } alt="" />
                 <span className="cursor-link">ardzcodes</span>
               </a>
               <div className={`nav_container ${isOpen ? 'nav_container--active' : ''} flex ai-c jc-sb`}>
                 <nav className='nav flex ai-c'>
-                    <a className='menu-font cursor-link opacity-anim title' onClick={toggleMenu} href="/portfolio"><span className="title-anim">{t('header.portfolio')}</span></a>
-                    <a className='menu-font cursor-link opacity-anim title' onClick={toggleMenu} href="#contact"><span className="title-anim">{t('header.contact')}</span></a>
+                    <a className='menu-font opacity-anim title' onClick={toggleMenu} href="/"><span className="title-anim cursor-link">{t('header.home')}</span></a>
+                    <a className='menu-font opacity-anim title' onClick={toggleMenu} href="/portfolio"><span className="title-anim cursor-link">{t('header.portfolio')}</span></a>
+                    <a className='menu-font opacity-anim title' onClick={toggleMenu} href="#contact"><span className="title-anim cursor-link">{t('header.contact')}</span></a>
                 </nav>
                 <div className='nav_icons flex cursor-link opacity-anim'>
                     <a target='_blank' rel='noreferrer' href="https://www.instagram.com/a.rdzcodes24/" ><FaInstagram size={23} /></a>
                     <a href="/" ><FaFacebookSquare size={23} /></a>
                     <a target='_blank' rel='noreferrer' href="https://github.com/angel2424" ><FaGithub size={23} /></a>
                 </div>
-                <center>
-                  <div class="switch">
-                    <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox" checked={isChecked}
-                      onChange={handleOnChange} onClick={() => isChecked ? i18n.changeLanguage('en') : i18n.changeLanguage('es')}></input>
-                    <label for="language-toggle" ></label>
-                    <span class="on">EN</span>
-                    <span class="off">ES</span>
-                  </div>
-                </center>
+                <div className="nav_toggles">
+                    <div class="switch">
+                      <input id="language-toggle" className="check-toggle check-toggle-round-flat" type="checkbox" checked={isChecked}
+                        onChange={handleOnChange} onClick={() => isChecked ? i18n.changeLanguage('en') : i18n.changeLanguage('es')}></input>
+                      <label for="language-toggle" ></label>
+                      <span class="on">EN</span>
+                      <span class="off">ES</span>
+                    </div>
+                  <button className="bulb cursor-link" onClick={toggleTheme}><img src={`${theme === 'dark' ? off : on}`} alt="" /></button>
+                </div>
               </div>
               <div className={`hamburger cursor-link opacity-anim ${isOpen ? 'hamburger--active' : ''}`} onClick={toggleMenu}>
                 <span className='bar cursor-link'></span>

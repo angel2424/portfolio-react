@@ -51,11 +51,13 @@ const About = () => {
 
   return (
     <div className={'about flex'} id='about' ref={boxRef}>
+      <div className='about_imgContainer'>
         <img className='about_img' src={about} alt="" />
-        <div className={`about_text flex direction-c jc-c`}>
-            <h2 className='xl title'><span className='title-anim'>{t('about.title')}</span></h2>
-            <p className='xs'>{t('about.text')}</p>
-        </div>
+      </div>
+      <div className={`about_text flex direction-c jc-c`}>
+          <h2 className='xl title'><span className='title-anim'>{t('about.title')}</span></h2>
+          <p className='xs'>{t('about.text')}</p>
+      </div>
     </div>
   )
 }

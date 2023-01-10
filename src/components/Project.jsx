@@ -28,8 +28,7 @@ const Project = ( { title, img, alt, description, tech, live, github, index } ) 
           <img className='cursor-link' src={img} alt={alt}/>
       </div>
       <div className='project_textContainer'>
-        <h4 className='xs'>{title}</h4>
-        <p className='xs'>{description}</p>
+        <h4 className='s'>{title}</h4>
         <div className='project_tech flex'>
           {
             tech?.map((skill, index) => (

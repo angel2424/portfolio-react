@@ -4,12 +4,21 @@ import nextjs from '../../images/nextjs.png'
 import sass from '../../images/sass.png'
 import npm from '../../images/npm.png'
 import github from '../../images/github.png'
+import jsDark from '../../images/js-dark.png'
+import reactDark from '../../images/react-dark.png'
+import nextjsDark from '../../images/nextjs-dark.png'
+import sassDark from '../../images/sass-dark.png'
+import npmDark from '../../images/npm-dark.png'
+import githubDark from '../../images/github-dark.png'
 import { gsap } from "gsap";
-import { useLayoutEffect, useRef } from 'react';
+import { useContext, useLayoutEffect, useRef } from 'react';
+import { ThemeContext } from '../../App'
 
 const Skills = () => {
 
     const boxRef = useRef();
+
+    const {theme} = useContext(ThemeContext)
 
     useLayoutEffect(() => {
   
@@ -61,31 +70,30 @@ const Skills = () => {
 
         <div className={`skills_list flex flex-wrap ai-c jc-c`}>
             <div className='skill flex direction-c ai-c jc-c'>
-                <img src={js} alt="" />
+                <img src={theme === 'dark' ? js : jsDark} alt="Javascript" />
                 <h4 className='xs text'><span className='text-anim'>Javascript</span></h4>
             </div>
             <div className='skill flex direction-c ai-c jc-c'>
-                <img src={react} alt="" />
+                <img src={theme === 'dark' ? react : reactDark} alt="React Js" />
                 <h4 className='xs text'><span className='text-anim'>React JS</span></h4>
             </div>
             <div className='skill flex direction-c ai-c jc-c'>
-                <img src={nextjs} alt="" />
+                <img src={theme === 'dark' ? nextjs : nextjsDark} alt="Next Js" />
                 <h4 className='xs text'><span className='text-anim'>Next JS</span></h4>
             </div>
             <div className='skill flex direction-c ai-c jc-c'>
-                <img src={sass} alt="" />
+                <img src={theme === 'dark' ? sass : sassDark} alt="Sass" />
                 <h4 className='xs text'><span className='text-anim'>Sass</span></h4>
             </div>
             <div className='skill flex direction-c ai-c jc-c'>
-                <img src={npm} alt="" />
+                <img src={theme === 'dark' ? npm : npmDark} alt="NPM" />
                 <h4 className='xs text'><span className='text-anim'>Npm</span></h4>
             </div>
             <div className='skill flex direction-c ai-c jc-c'>
-                <img src={github} alt="" />
+                <img src={theme === 'dark' ? github : githubDark} alt="Github" />
                 <h4 className='xs text'><span className='text-anim'>Github</span></h4>
             </div>
         </div>
-
     </div>
   )
 }
