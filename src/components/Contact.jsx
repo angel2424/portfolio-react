@@ -1,9 +1,13 @@
 import { gsap } from "gsap";
 import React, { useLayoutEffect, useRef } from 'react';
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
 
+  const { t } = useTranslation();
+
   const boxRef = useRef();
+
 
   useLayoutEffect(() => {
 
@@ -58,34 +62,34 @@ const Contact = () => {
 
   return (
     <div className='contact' id='contact' ref={boxRef}>
-        <span className='s text' style={{color: '#31809D'}}><span className="text-anim">Want to hire me?</span></span>
+        <span className='s text' style={{color: '#31809D'}}><span className="text-anim">{t('contact.subTitle')}</span></span>
         <h2 className='xl title'>
-          <span className='title-anim'>Let's get in contact!</span>
+          <span className='title-anim'>{t('contact.title')}</span>
         </h2>
 
         <form name="contact" method="POST" data-netlify="true" className="contact-form">
           <div className='contact_inputs flex'>
             <div>
               <p>
-                <label>Your Name: <input type="text" name="name" /></label>
+                <label>{t('contact.name')} <input type="text" name="name" /></label>
               </p>
               <p>
-                <label>Your Email: <input type="email" name="email" /></label>
+                <label>{t('contact.email')} <input type="email" name="email" /></label>
               </p>
               <p>
-                <label>Subject: <input type="email" name="email" /></label>
+                <label>{t('contact.subject')} <input type="email" name="email" /></label>
               </p>
           </div>
           <div className='form_message'>
             <p>
-              <label>Message: <textarea name="message"></textarea></label>
+              <label>{t('contact.message')} <textarea name="message"></textarea></label>
             </p>
             </div>
           </div>
           <p>
           <button className='button xs' type='submit'>
             <a className='button_link flex jc-c ai-c' href="/">
-              Submit
+              {t('contact.btn')}
             </a>
           </button>
           </p>

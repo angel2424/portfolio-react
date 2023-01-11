@@ -412,6 +412,11 @@ select:-webkit-autofill:focus {
   width: 100%;
 }
 
+@media screen and (max-width: 1100px) {
+  .button:hover::before {
+    width: 0;
+  }
+}
 /* Loader */
 
   .loader {

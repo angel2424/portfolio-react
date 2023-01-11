@@ -10,7 +10,7 @@ import Contact from '../components/Contact'
 
 const Portfolio = () => {
 
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const boxRef = useRef();
 
@@ -82,7 +82,7 @@ const Portfolio = () => {
       <div className='portfolio' ref={boxRef}>
         <div className='portfolio_hero'>
           <h1 className='xxl'>Portfolio</h1>
-          <p className='xs'>Welcome! Here you can view all my projects from personal to more professional work.</p>
+          <p className='xs'>{t('portfolio.text')}</p>
         </div>
         <div className='portfolio_projectsSection'>
         <div className={'projects grid'}>
