@@ -139,12 +139,24 @@ const Contact = () => {
       const myForm = values;
       const formData = new FormData(myForm);
 
+      function encode(data) {
+        return Object.keys(data)
+          .map(
+            (key) =>
+              encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+          )
+          .join("&");
+      }
+
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        body: encode({
+          "form-name": "contact",
+          ...formData,
+        }),
       })
-        .then(() => console.log("Form successfully submitted"))
+        .then(() => navigate("/success"))
         .catch((error) => alert(error));
     },
   });
