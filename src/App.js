@@ -38,12 +38,12 @@ function App() {
         :
         <div className='app' id={theme}>
           <CustomCursor />
-          <Layout>
-            <Routes>
-              <Route exact path='/' element={<Home />}/>
-              <Route exact path='/portfolio' element={<Portfolio />}/>
-            </Routes>
-          </Layout>
+            <Layout>
+              <Routes>
+                <Route exact path='/' element={<Home />}/>
+                <Route exact path='/portfolio' element={<Portfolio />}/>
+              </Routes> 
+            </Layout>
           <Footer />
         </div>
       }

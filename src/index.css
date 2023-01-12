@@ -8,19 +8,17 @@
   --fs-20: 1.25rem;
   --fs-16: 1rem;
 
-
   --primary-color: #fff;
-  --secondary-color: #2F3848;
-  --accent-color: #31809D;
-  --accent-color2: #A1A1A1;
-  --bg-color: #12121C; 
-  
+  --secondary-color: #2f3848;
+  --accent-color: #31809d;
+  --accent-color2: #a1a1a1;
+  --bg-color: #12121c;
+
   --padding-nav: 20px 155px;
   --container: 112.5rem;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
@@ -35,8 +33,8 @@ html {
 body {
   margin: 0;
   color: #fff;
-  font-family: 'Outfit', sans-serif;
-  background-color: #12121C;
+  font-family: "Outfit", sans-serif;
+  background-color: #12121c;
 }
 
 .app {
@@ -45,8 +43,8 @@ body {
 
 #light {
   --bg-color: #fff;
-  --primary-color: #12121C;
-  color: #12121C;
+  --primary-color: #12121c;
+  color: #12121c;
 }
 
 #light .header {
@@ -54,7 +52,7 @@ body {
 }
 
 #light a {
-  color: #12121C;
+  color: #12121c;
   font-weight: 500;
 }
 
@@ -77,7 +75,6 @@ body {
   .wrapper {
     width: calc(100% - 5.6rem);
   }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -92,19 +89,17 @@ body {
 
 a {
   color: #fff;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   text-decoration: none;
 }
 
-#light button 
-
-button {
+#light button button {
   color: #fff;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -113,7 +108,7 @@ code {
 }
 
 .logo {
-  transition: ease .3s;
+  transition: ease 0.3s;
   display: flex;
   align-items: center;
 }
@@ -126,26 +121,26 @@ code {
   width: 50px;
   height: 100%;
   margin-right: 20px;
-  transition: linear .3s;
+  transition: linear 0.3s;
 }
 
-.logo span{
- opacity: 1;
- transition: ease .2s;
+.logo span {
+  opacity: 1;
+  transition: ease 0.2s;
 }
 
-.logo--active span{
+.logo--active span {
   opacity: 0;
   pointer-events: none;
 }
 
-.logo--active img{
+.logo--active img {
   width: 70px;
   height: 100%;
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
@@ -162,29 +157,29 @@ select:-webkit-autofill:focus {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #31809D;
-  border: 0px solid #31809D;
+  background-color: #31809d;
+  border: 0px solid #31809d;
   position: fixed;
   z-index: 1000;
   pointer-events: none;
   overflow: hidden;
-  transform: translate3d(0,0,0);
-  transition: transform .15s, width .6s, height .6s, background-color .6s;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.15s, width 0.6s, height 0.6s, background-color 0.6s;
 }
 
 .app-cursor2 {
   width: 50px;
   height: 50px;
-  opacity: .5;
-  border: 2px solid #31809D;
+  opacity: 0.5;
+  border: 2px solid #31809d;
   border-radius: 50%;
   background-color: transparent;
   position: fixed;
   z-index: 1000;
   pointer-events: none;
   overflow: hidden;
-  transform: translate3d(0,0,0);
-  transition: transform .15s, width .2s, height .2s, background-color .2s;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.15s, width 0.2s, height 0.2s, background-color 0.2s;
 }
 
 @property --rotate {
@@ -210,9 +205,9 @@ select:-webkit-autofill:focus {
 .xs {
   font-size: var(--fs-20);
   font-weight: 300;
-  color: #A1A1A1;
+  color: #a1a1a1;
   line-height: 110%;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   z-index: 5;
 }
 
@@ -263,34 +258,34 @@ select:-webkit-autofill:focus {
     font-weight: 300;
     z-index: 5;
   }
-  
+
   .xs {
     font-size: var(--fs-20);
     font-weight: 300;
-    color: #A1A1A1;
+    color: #a1a1a1;
     line-height: 110%;
-    letter-spacing: .8px;
+    letter-spacing: 0.8px;
     z-index: 5;
   }
-  
+
   .s {
     font-size: var(--fs-24);
     font-weight: 500;
     z-index: 5;
   }
-  
+
   .m {
     font-size: var(--fs-24);
     font-weight: 400;
     z-index: 5;
   }
-  
+
   .l {
     font-size: var(--fs-38);
     font-weight: 500;
     z-index: 5;
   }
-  
+
   .xl {
     font-size: var(--fs-48);
     font-weight: 700;
@@ -310,22 +305,21 @@ select:-webkit-autofill:focus {
   }
 }
 
-@media screen and (max-width: 1100px) { 
-.menu_text .line .word{
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  line-height: 3rem;
-}
+@media screen and (max-width: 1100px) {
+  .menu_text .line .word {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 3rem;
+  }
 
-
-.menu_chars {
-  transform: translateY(100%);
-  transition: transform .5s;
-}
+  .menu_chars {
+    transform: translateY(100%);
+    transition: transform 0.5s;
+  }
 }
 
 /* Flex class */
 
-.grid{
+.grid {
   display: grid;
 }
 
@@ -345,7 +339,7 @@ select:-webkit-autofill:focus {
   justify-content: center;
 }
 
-.jc-r{
+.jc-r {
   justify-content: right;
 }
 
@@ -367,25 +361,26 @@ select:-webkit-autofill:focus {
   position: relative;
   background-color: transparent;
   color: #fff;
-  border: 2px solid #31809D;
+  border: 2px solid #31809d;
   padding: 13px 55px;
   height: 50px;
   width: 250px;
   margin-top: 50px;
   cursor: pointer;
-  transition: ease .3s;
+  transition: ease 0.3s;
+  font-family: "Outfit", sans-serif;
 }
 
 .button::before {
-  content: '';
+  content: "";
   width: 0;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #31809D;
+  background-color: #31809d;
   z-index: 2;
-  transition: ease .5s;
+  transition: ease 0.5s;
 }
 
 .button_link {
@@ -399,12 +394,12 @@ select:-webkit-autofill:focus {
 }
 
 #light .button a:hover {
-  color: #12121C;
+  color: #12121c;
   font-size: 400;
 }
 
 .button:hover {
-  opacity: .8;
+  opacity: 0.8;
   transform: scale(1.05);
 }
 
@@ -419,144 +414,173 @@ select:-webkit-autofill:focus {
 }
 /* Loader */
 
-  .loader {
-    height: 100vh;
-    background-color: #12121C;
+.loader {
+  height: 100vh;
+  background-color: #12121c;
+}
+
+#light .loader {
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+@keyframes animate-svg-fill {
+  0% {
+    fill: transparent;
   }
 
-  #light .loader {
-    height: 100vh;
-    background-color: #ffffff;
+  100% {
+    fill: rgb(255, 255, 255);
   }
- 
- @keyframes animate-svg-fill {
-   0% {
-     fill: transparent;
-    }
-    
-    100% {
-      fill: rgb(255, 255, 255);
-    }
+}
+
+@-webkit-keyframes animate-svg-fill {
+  0% {
+    fill: transparent;
   }
 
-  @-webkit-keyframes animate-svg-fill {
-   0% {
-     fill: transparent;
-   }
- 
-   100% {
-     fill: rgb(255, 255, 255);
-   }
- }
+  100% {
+    fill: rgb(255, 255, 255);
+  }
+}
 
- @keyframes animate-svg-fill-light {
-   0% {
-     fill: transparent;
-    }
-    
-    100% {
-      fill: #12121C;
-    }
+@keyframes animate-svg-fill-light {
+  0% {
+    fill: transparent;
   }
 
-  @-webkit-keyframes animate-svg-fill-light {
-   0% {
-     fill: transparent;
-   }
- 
-   100% {
-     fill: #12121C;
-   }
- }
+  100% {
+    fill: #12121c;
+  }
+}
+
+@-webkit-keyframes animate-svg-fill-light {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: #12121c;
+  }
+}
 
 .svg-elem-1 {
-  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.1s both;
-          animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.1s both;
+  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.1s both;
+  animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.1s both;
 }
 
 #light .svg-elem-1 {
-  -webkit-animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.1s both;
-          animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.1s both;
+  -webkit-animation: animate-svg-fill-light 0.3s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.1s both;
+  animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.1s both;
 }
 
 .svg-elem-2 {
-  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.2s both;
-          animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.2s both;
+  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.2s both;
+  animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.2s both;
 }
 
 #light .svg-elem-2 {
-  -webkit-animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.2s both;
-          animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.2s both;
+  -webkit-animation: animate-svg-fill-light 0.3s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.2s both;
+  animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.2s both;
 }
 
 .svg-elem-3 {
-  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.30000000000000004s both;
-          animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.30000000000000004s both;
+  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.30000000000000004s both;
+  animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.30000000000000004s both;
 }
 
 #light .svg-elem-3 {
-  -webkit-animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.30000000000000004s both;
-          animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.30000000000000004s both;
+  -webkit-animation: animate-svg-fill-light 0.3s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.30000000000000004s both;
+  animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.30000000000000004s both;
 }
 
 .svg-elem-4 {
-  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.4s both;
-          animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.4s both;
+  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.4s both;
+  animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.4s both;
 }
 
 #light .svg-elem-4 {
-  -webkit-animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.4s both;
-          animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.4s both;
+  -webkit-animation: animate-svg-fill-light 0.3s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.4s both;
+  animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.4s both;
 }
 
 .svg-elem-5 {
-  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s both;
-          animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s both;
+  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.5s both;
+  animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s both;
 }
 
 #light .svg-elem-5 {
-  -webkit-animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s both;
-          animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s both;
+  -webkit-animation: animate-svg-fill-light 0.3s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s both;
+  animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.5s both;
 }
 
 .svg-elem-6 {
-  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s both;
-          animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s both;
+  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.6s both;
+  animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s both;
 }
 
 #light .svg-elem-6 {
-  -webkit-animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s both;
-          animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s both;
+  -webkit-animation: animate-svg-fill-light 0.3s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s both;
+  animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.6s both;
 }
 
 .svg-elem-7 {
-  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.7000000000000001s both;
-          animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.7000000000000001s both;
+  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.7000000000000001s both;
+  animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.7000000000000001s both;
 }
 
 #light .svg-elem-7 {
-  -webkit-animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.7000000000000001s both;
-          animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.7000000000000001s both;
+  -webkit-animation: animate-svg-fill-light 0.3s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.7000000000000001s both;
+  animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.7000000000000001s both;
 }
 
 .svg-elem-8 {
-  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
-          animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
+  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.8s both;
+  animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
 }
 
 #light .svg-elem-8 {
-  -webkit-animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
-          animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
+  -webkit-animation: animate-svg-fill-light 0.3s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
+  animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.8s both;
 }
 
 .svg-elem-9 {
-  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s both;
-          animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s both;
+  -webkit-animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.9s both;
+  animation: animate-svg-fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s both;
 }
 
 #light .svg-elem-9 {
-  -webkit-animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s both;
-          animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s both;
+  -webkit-animation: animate-svg-fill-light 0.3s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s both;
+  animation: animate-svg-fill-light 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.9s both;
 }
 
 .switch {
@@ -569,17 +593,17 @@ select:-webkit-autofill:focus {
   position: absolute;
   top: 11px;
   pointer-events: none;
-  font-family: 'Helvetica', Arial, sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   font-weight: bold;
   font-size: 12px;
   text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
   width: 50%;
   text-align: center;
 }
 
 input.check-toggle-round-flat:checked ~ .off {
-  color: #2F3848;
+  color: #2f3848;
 }
 
 input.check-toggle-round-flat:checked ~ .on {
@@ -589,7 +613,7 @@ input.check-toggle-round-flat:checked ~ .on {
 .switch > span.on {
   left: 0;
   padding-left: 2px;
-  color: #31809D;
+  color: #31809d;
 }
 
 .switch > span.off {
@@ -618,14 +642,15 @@ input.check-toggle-round-flat + label {
   padding: 2px;
   width: 97px;
   height: 35px;
-  background-color: #2F3848;
+  background-color: #2f3848;
   -webkit-border-radius: 60px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   border-radius: 6px;
 }
-input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+input.check-toggle-round-flat + label:before,
+input.check-toggle-round-flat + label:after {
   display: block;
   position: absolute;
   content: "";
@@ -636,7 +661,7 @@ input.check-toggle-round-flat + label:before {
   left: 2px;
   bottom: 2px;
   right: 2px;
-  background-color: #2F3848;
+  background-color: #2f3848;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
@@ -662,16 +687,16 @@ input.check-toggle-round-flat + label:after {
 
 input.check-toggle-round-flat:checked + label:after {
   margin-left: 44px;
-  background-color: #31809D;
+  background-color: #31809d;
 }
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1100px) {
   .switch {
     margin-bottom: 20px;
     margin-left: 0;
   }
 
-  .logo--active img{
+  .logo--active img {
     width: 60px;
   }
 }
