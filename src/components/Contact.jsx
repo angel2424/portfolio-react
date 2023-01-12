@@ -147,7 +147,7 @@ const Contact = () => {
         name="contact"
         data-netlify={true}
         method="POST"
-        action={`/submission?${formik.values.name}`}
+        action={`/submission`}
         value="contact"
         className="contact-form"
       >
