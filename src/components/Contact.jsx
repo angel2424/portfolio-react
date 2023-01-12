@@ -148,7 +148,6 @@ const Contact = () => {
         body: encode({ "form-name": "contact", ...values }),
       })
         .then(() => {
-          alert("Success");
           navigate("./success");
           actions.resetForm();
         })
