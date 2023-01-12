@@ -133,32 +133,6 @@ const Contact = () => {
           }`
         ),
     }),
-    onSubmit: (values) => {
-      navigate("/success");
-
-      const myForm = values;
-      const formData = new FormData(myForm);
-
-      function encode(data) {
-        return Object.keys(data)
-          .map(
-            (key) =>
-              encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-          )
-          .join("&");
-      }
-
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "contact",
-          ...formData,
-        }),
-      })
-        .then(() => navigate("/success"))
-        .catch((error) => alert(error));
-    },
   });
 
   return (
@@ -174,10 +148,9 @@ const Contact = () => {
         name="contact"
         data-netlify={true}
         method="POST"
-        action="."
+        action="/success"
         value="contact"
         className="contact-form"
-        onSubmit={formik.handleSubmit}
       >
         <input type="hidden" name="form-name" value="contact" />
         <div className="contact_inputs flex">
