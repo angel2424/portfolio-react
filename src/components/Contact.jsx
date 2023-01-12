@@ -143,7 +143,12 @@ const Contact = () => {
         <span className="title-anim">{t("contact.title")}</span>
       </h2>
 
-      <form name="contact" className="contact-form" netlify>
+      <form
+        name="contact"
+        data-netlify={true}
+        method="POST"
+        action="/submission"
+      >
         <div className="contact_inputs flex">
           <div>
             <p>
