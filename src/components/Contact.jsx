@@ -3,12 +3,9 @@ import React, { useLayoutEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const { t, i18n } = useTranslation();
-
-  const navigate = useNavigate();
 
   const boxRef = useRef();
 
