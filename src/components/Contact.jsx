@@ -3,9 +3,11 @@ import React, { useLayoutEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   const boxRef = useRef();
 
@@ -54,6 +56,14 @@ const Contact = () => {
 
     return () => ctx.revert(); // cleanup
   }, []);
+
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
 
   //Formik logic
 
@@ -130,6 +140,23 @@ const Contact = () => {
           }`
         ),
     }),
+
+    onSubmit: (values, actions) => {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact-demo", ...values }),
+      })
+        .then(() => {
+          alert("Success");
+          navigate("./success");
+          actions.resetForm();
+        })
+        .catch(() => {
+          alert("Error");
+        })
+        .finally(() => actions.setSubmitting(false));
+    },
   });
 
   return (
@@ -145,10 +172,9 @@ const Contact = () => {
         name="contact"
         data-netlify={true}
         method="POST"
-        action="/success"
+        onSubmit={formik.handleSubmit}
         value="contact"
         className="contact-form"
-        netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />
         <div className="contact_inputs flex">
