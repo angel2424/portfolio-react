@@ -67,7 +67,17 @@ body {
   margin-inline: auto;
 }
 
-@media screen and (max-width: 1100px) {
+/* 1500px */
+
+@media screen and (max-width: 93.75em) {
+  .wrapper {
+    width: calc(100% - 11.8);
+  }
+}
+
+/* 1100px */
+
+@media screen and (max-width: 68.75em) {
   :root {
     --padding-nav: 20px 55px;
   }
@@ -77,7 +87,9 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+/* 600px */
+
+@media screen and (max-width: 37.5em) {
   :root {
     --padding-nav: 20px 35px;
   }
