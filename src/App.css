@@ -403,6 +403,15 @@ header {
 
 .contact {
   margin: 150px 0;
+  width: 100%;
+}
+
+.contact_inputs {
+  width: 100%;
+}
+
+.contact_inputs div {
+  flex: 1;
 }
 
 .contact > form {
@@ -457,7 +466,7 @@ header {
 }
 
 .contact > form textarea {
-  width: 35vw;
+  width: 100%;
   height: 190px;
   padding: 20px;
 }

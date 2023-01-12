@@ -70,6 +70,10 @@ body {
 /* 1500px */
 
 @media screen and (max-width: 96.8em) {
+  :root {
+    --padding-nav: 20px 95px;
+  }
+
   .wrapper {
     width: calc(100% - 11.8rem);
   }
