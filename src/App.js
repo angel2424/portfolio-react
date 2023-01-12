@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import CustomCursor from "./components/CustomCursor";
 import { createContext } from "react";
 import useLocalStorage from "use-local-storage";
-import Submission from "./pages/Submission";
+import Success from "./pages/Success";
 
 export const ThemeContext = createContext(null);
 
@@ -44,7 +44,7 @@ function App() {
               <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/portfolio" element={<Portfolio />} />
-                <Route path="/success" element={<Submission />} />
+                <Route path="/success" element={<Success />} />
               </Routes>
             </Layout>
             {location.pathname === "/success" ? "" : <Footer />}
