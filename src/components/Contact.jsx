@@ -145,7 +145,7 @@ const Contact = () => {
         name="contact"
         data-netlify={true}
         method="POST"
-        action="/success"
+        action="/#/success"
         value="contact"
         className="contact-form"
       >
