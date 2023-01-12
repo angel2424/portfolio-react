@@ -158,6 +158,8 @@ const Contact = () => {
     },
   });
 
+  console.log(formik.errors);
+
   return (
     <div className="contact" ref={boxRef}>
       <span className="s text" style={{ color: "#31809D" }}>
