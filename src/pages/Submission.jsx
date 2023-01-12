@@ -1,18 +1,28 @@
 import React from "react";
 import { useSearchParams } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
+import Confetti from "react-confetti";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Submission = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  // eslint-disable-next-line
+  const [pieces, setPieces] = useState(200);
 
-  const name = searchParams.get("name");
+  const stopConfetti = () => {
+    setTimeout(() => {
+      setPieces(0);
+    }, 3000);
+  };
+
+  useEffect(() => {
+    stopConfetti();
+  }, []);
 
   return (
     <div className="submission">
       <div className="submission_container">
-        <h1 className="xl">{`Thank you for your message${
-          name ? " " + name : ""
-        }! 🥳`}</h1>
+        <h1 className="xl">{`Thank you for your message! 🥳`}</h1>
         <p className="xs">I will reach out as soon as I can</p>
 
         <button className="submission_button">
@@ -22,6 +32,7 @@ const Submission = () => {
           </a>
         </button>
       </div>
+      <Confetti numberOfPieces={pieces} gravity={0.2} />
     </div>
   );
 };
