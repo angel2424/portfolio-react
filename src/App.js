@@ -39,8 +39,6 @@ function App() {
           <div className="app" id={theme}>
             <Loader />
           </div>
-        ) : location.pathname === "/submission" ? (
-          <Submission />
         ) : (
           <div className="app" id={theme}>
             <CustomCursor />
@@ -48,6 +46,7 @@ function App() {
               <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/portfolio" element={<Portfolio />} />
+                <Route exact path="/submission" element={<Submission />} />
               </Routes>
             </Layout>
             <Footer />
