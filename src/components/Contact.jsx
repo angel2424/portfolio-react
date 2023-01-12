@@ -148,7 +148,9 @@ const Contact = () => {
         data-netlify={true}
         method="POST"
         action="/submission"
+        value="contact"
       >
+        <input type="hidden" name="form-name" value="contact" />
         <div className="contact_inputs flex">
           <div>
             <p>
