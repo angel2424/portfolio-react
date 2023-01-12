@@ -1,5 +1,4 @@
 import React from "react";
-import { useSearchParams } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import Confetti from "react-confetti";
 import { useState } from "react";
