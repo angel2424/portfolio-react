@@ -3,9 +3,12 @@ import React, { useLayoutEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const { t, i18n } = useTranslation();
+
+  const navigate = useNavigate();
 
   const boxRef = useRef();
 
@@ -130,6 +133,9 @@ const Contact = () => {
           }`
         ),
     }),
+    onSubmit: () => {
+      navigate("/success");
+    },
   });
 
   return (
@@ -145,9 +151,10 @@ const Contact = () => {
         name="contact"
         data-netlify={true}
         method="POST"
-        action="/success/"
+        action="."
         value="contact"
         className="contact-form"
+        onSubmit={formik.handleSubmit}
       >
         <input type="hidden" name="form-name" value="contact" />
         <div className="contact_inputs flex">
