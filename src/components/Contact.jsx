@@ -130,12 +130,10 @@ const Contact = () => {
           }`
         ),
     }),
-
-    //Submit form
   });
 
   return (
-    <div className="contact" id="contact" ref={boxRef}>
+    <div className="contact" ref={boxRef}>
       <span className="s text" style={{ color: "#31809D" }}>
         <span className="text-anim">{t("contact.subTitle")}</span>
       </span>
@@ -147,7 +145,7 @@ const Contact = () => {
         name="contact"
         data-netlify={true}
         method="POST"
-        action="/submission/"
+        action="/success/"
         value="contact"
         className="contact-form"
       >
