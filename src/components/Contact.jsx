@@ -147,8 +147,9 @@ const Contact = () => {
         name="contact"
         data-netlify={true}
         method="POST"
-        action="/submission"
+        action={`/submission?${formik.values.name}`}
         value="contact"
+        className="contact-form"
       >
         <input type="hidden" name="form-name" value="contact" />
         <div className="contact_inputs flex">
