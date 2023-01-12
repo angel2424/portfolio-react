@@ -46,7 +46,7 @@ function App() {
               <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/portfolio" element={<Portfolio />} />
-                <Route exact path="/submission" element={<Submission />} />
+                <Route path="/submission" element={<Submission />} />
               </Routes>
             </Layout>
             <Footer />
