@@ -145,9 +145,10 @@ const Contact = () => {
         name="contact"
         data-netlify={true}
         method="POST"
-        action="/#/success"
+        action="/success"
         value="contact"
         className="contact-form"
+        netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />
         <div className="contact_inputs flex">
