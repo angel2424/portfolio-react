@@ -897,7 +897,7 @@ header {
   .contact > form input,
   .contact > form select,
   .contact > form textarea {
-    width: auto;
+    width: 100%;
   }
 
   .footer {
