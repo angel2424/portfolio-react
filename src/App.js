@@ -30,8 +30,6 @@ function App() {
 
   let location = useLocation();
 
-  console.log(location.pathname);
-
   return (
     <>
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
@@ -49,7 +47,7 @@ function App() {
                 <Route path="/success" element={<Submission />} />
               </Routes>
             </Layout>
-            <Footer />
+            {location.pathname === "/success" ? "" : <Footer />}
           </div>
         )}
       </ThemeContext.Provider>
