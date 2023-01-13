@@ -1,70 +1,65 @@
 [
-        {
-            "id": "1",
-            "img": "goodmemx.jpg",
-            "title": "Good Memories",
-            "slug": "good-memories",
-            "description" : "Diseño y desarrollo web para un negocio de fotografía y video en mi ciudad. El enfoque principal fue mostrar todo su trabajo y paquetes de servicio, al igual que compartir su visión con todos sus clientes a través de todo el sitio. ",
-            "tech": ["React", "Next JS", "Hygraph CMS", "Netlify"],
-            "live": "https://goodmemx.com",
-            "github": ""
-        },
-        {
-            "id": "2",
-            "img": "wedding_invitation.jpg",
-            "title": "Invitacion digital (Demo)",
-            "slug": "wedding-website",
-            "description" : "Diseño y desarrollo de plantilla web para invitacion digital en colaboracion con Good Memories. Las invitaciones digitales son sitios donde se mostrara informacion de la boda, al igual que los invitados podran confirmar asistencia directamente en el sitio, y los novio recibiran un documento google sheets que se actualize en tiempo real con los datos de los invitados.",
-            "tech": ["HTML", "CSS", "Zapier", "Netlify", "Netlify Forms"],
-            "live": "https://johnysarah.goodmemx.com",
-            "github": "https://github.com/angel2424/johnandsarah-site"
-        },
-        {
-            "id": "3",
-            "img": "weather_app.png",
-            "title": "Weather web app",
-            "slug": "weather-app",
-            "description" : "Diseño y desarrollo web para un negocio de fotografía y video en mi ciudad. El enfoque principal fue mostrar todo su trabajo y paquetes de servicio, al igual que compartir su visión con todos sus clientes a través de todo el sitio. ",
-            "tech": ["React", "Next JS", "Hygraph CMS"]
-        },
-        {
-            "id": "4",
-            "img": "space_tourism.png",
-            "title": "Space Tourism",
-            "slug": "space-tourism",
-            "description" : "Diseño y desarrollo web para un negocio de fotografía y video en mi ciudad. El enfoque principal fue mostrar todo su trabajo y paquetes de servicio, al igual que compartir su visión con todos sus clientes a través de todo el sitio. ",
-            "tech": ["React", "Next JS", "Hygraph CMS"]
-        },
-        {
-            "id": "5",
-            "img": "bookmark-landing.jpg",
-            "title": "Bookmark Landing",
-            "slug": "bookmark-landing",
-            "description" : "Diseño y desarrollo web para un negocio de fotografía y video en mi ciudad. El enfoque principal fue mostrar todo su trabajo y paquetes de servicio, al igual que compartir su visión con todos sus clientes a través de todo el sitio. ",
-            "tech": ["React", "Next JS", "Hygraph CMS"]
-        },
-        {
-            "id": "6",
-            "img": "todo_app.jpg",
-            "title": "To-do App",
-            "slug": "todo-app",
-            "description" : "Diseño y desarrollo web para un negocio de fotografía y video en mi ciudad. El enfoque principal fue mostrar todo su trabajo y paquetes de servicio, al igual que compartir su visión con todos sus clientes a través de todo el sitio. ",
-            "tech": ["React", "Next JS", "Hygraph CMS"]
-        },
-        {
-            "id": "7",
-            "img": "desktop-design.jpg",
-            "title": "CSS Chat Mockup",
-            "slug": "css-mockup",
-            "description" : "Diseño y desarrollo web para un negocio de fotografía y video en mi ciudad. El enfoque principal fue mostrar todo su trabajo y paquetes de servicio, al igual que compartir su visión con todos sus clientes a través de todo el sitio. ",
-            "tech": ["React", "Next JS", "Hygraph CMS"]
-        },
-        {
-            "id": "8",
-            "img": "ecommerce_img.png",
-            "title": "E-commerce Product Page",
-            "slug": "ecommerce-product-page",
-            "description" : "Diseño y desarrollo web para un negocio de fotografía y video en mi ciudad. El enfoque principal fue mostrar todo su trabajo y paquetes de servicio, al igual que compartir su visión con todos sus clientes a través de todo el sitio. ",
-            "tech": ["React", "Next JS", "Hygraph CMS"]
-        }
+  {
+    "id": "1",
+    "img": "goodmemx.jpg",
+    "title": "Good Memories",
+    "slug": "good-memories",
+    "tech": ["React", "Next JS", "Hygraph CMS", "Netlify"],
+    "live": "https://goodmemx.com",
+    "github": ""
+  },
+  {
+    "id": "2",
+    "img": "wedding_invitation.jpg",
+    "title": "Invitacion digital (Demo)",
+    "slug": "wedding-website",
+    "tech": ["HTML", "CSS", "Zapier", "Netlify", "Netlify Forms"],
+    "live": "https://johnysarah.goodmemx.com",
+    "github": "https://github.com/angel2424/johnandsarah-site"
+  },
+  {
+    "id": "3",
+    "img": "weather_app.png",
+    "title": "Weather web app",
+    "slug": "weather-app",
+    "tech": ["React", "Next JS", "Hygraph CMS"],
+    "live": "https://johnysarah.goodmemx.com",
+    "github": "https://github.com/angel2424/johnandsarah-site"
+  },
+  {
+    "id": "4",
+    "img": "space_tourism.png",
+    "title": "Space Tourism",
+    "slug": "space-tourism",
+    "tech": ["React", "Next JS", "Hygraph CMS"],
+    "live": "https://johnysarah.goodmemx.com",
+    "github": "https://github.com/angel2424/johnandsarah-site"
+  },
+  {
+    "id": "5",
+    "img": "bookmark-landing.jpg",
+    "title": "Bookmark Landing",
+    "slug": "bookmark-landing",
+    "tech": ["React", "Next JS", "Hygraph CMS"],
+    "live": "https://johnysarah.goodmemx.com",
+    "github": "https://github.com/angel2424/johnandsarah-site"
+  },
+  {
+    "id": "6",
+    "img": "todo_app.jpg",
+    "title": "To-do App",
+    "slug": "todo-app",
+    "tech": ["React", "Next JS", "Hygraph CMS"],
+    "live": "https://johnysarah.goodmemx.com",
+    "github": "https://github.com/angel2424/johnandsarah-site"
+  },
+  {
+    "id": "7",
+    "img": "ecommerce_img.png",
+    "title": "E-commerce Product Page",
+    "slug": "ecommerce-product-page",
+    "tech": ["React", "Next JS", "Hygraph CMS"],
+    "live": "https://johnysarah.goodmemx.com",
+    "github": "https://github.com/angel2424/johnandsarah-site"
+  }
 ]
