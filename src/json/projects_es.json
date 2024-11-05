@@ -5,8 +5,8 @@
     "title": "Good Memories",
     "slug": "good-memories",
     "tech": ["React", "Next JS", "Hygraph CMS", "Netlify"],
-    "live": "https://goodmemx.com",
-    "github": ""
+    "live": "https://goodmemx.ardzcodes.site",
+    "github": "https://github.com/angel2424/goodmemories"
   },
   {
     "id": "2",
@@ -14,7 +14,7 @@
     "title": "Invitacion digital (Demo)",
     "slug": "wedding-website",
     "tech": ["HTML", "CSS", "Zapier", "Netlify", "Netlify Forms"],
-    "live": "https://johnysarah.goodmemx.com",
+    "live": "https://wedding-template.ardzcodes.site",
     "github": "https://github.com/angel2424/johnandsarah-site"
   },
   {
@@ -23,8 +23,8 @@
     "title": "Weather web app",
     "slug": "weather-app",
     "tech": ["React", "Next JS", "Hygraph CMS"],
-    "live": "https://johnysarah.goodmemx.com",
-    "github": "https://github.com/angel2424/johnandsarah-site"
+    "live": "https://weather.ardzcodes.site",
+    "github": "https://github.com/angel2424/weather-app"
   },
   {
     "id": "4",
@@ -32,8 +32,8 @@
     "title": "Space Tourism",
     "slug": "space-tourism",
     "tech": ["React", "Next JS", "Hygraph CMS"],
-    "live": "https://johnysarah.goodmemx.com",
-    "github": "https://github.com/angel2424/johnandsarah-site"
+    "live": "https://space.ardzcodes.site",
+    "github": "https://github.com/angel2424/space_tourism/tree/master"
   },
   {
     "id": "5",
@@ -41,8 +41,8 @@
     "title": "Bookmark Landing",
     "slug": "bookmark-landing",
     "tech": ["React", "Next JS", "Hygraph CMS"],
-    "live": "https://johnysarah.goodmemx.com",
-    "github": "https://github.com/angel2424/johnandsarah-site"
+    "live": "https://bookmark.ardzcodes.site",
+    "github": "https://github.com/angel2424/bookmark_landing"
   },
   {
     "id": "6",
@@ -50,8 +50,8 @@
     "title": "To-do App",
     "slug": "todo-app",
     "tech": ["React", "Next JS", "Hygraph CMS"],
-    "live": "https://johnysarah.goodmemx.com",
-    "github": "https://github.com/angel2424/johnandsarah-site"
+    "live": "https://todo.ardzcodes.site",
+    "github": "https://github.com/angel2424/to_do_app"
   },
   {
     "id": "7",
@@ -59,7 +59,7 @@
     "title": "E-commerce Product Page",
     "slug": "ecommerce-product-page",
     "tech": ["React", "Next JS", "Hygraph CMS"],
-    "live": "https://johnysarah.goodmemx.com",
-    "github": "https://github.com/angel2424/johnandsarah-site"
+    "live": "https://ecommerce.ardzcodes.site",
+    "github": "https://github.com/angel2424/ecommerce_product_page"
   }
 ]
