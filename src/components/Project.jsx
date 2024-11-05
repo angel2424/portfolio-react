@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const Project = ( { title, img, alt, description, tech, live, github, index } ) => {
+const Project = ( { title, img, alt, description, tech, live, github, index} ) => {
 
   const { t } = useTranslation();
 
@@ -9,20 +9,27 @@ const Project = ( { title, img, alt, description, tech, live, github, index } ) 
     <div key={index} className='project' onLoad={ScrollTrigger.refresh()}>
       <div className='project_imgContainer cursor-link'>
           <span className='project_imgOverlay'>
-            <button className='button xs'>
-              <a target='_blank' rel="noreferrer" className='button_link flex jc-c ai-c' href={live}>
-                {t('work.projectButton1')}
-              </a>
-            </button>              
+            {   live === "" ? null :
+                <button className='button xs'>
+                    <a target='_blank' rel="noreferrer" className='button_link flex jc-c ai-c' href={live}>
+                        {t('work.projectButton1')}
+                    </a>
+                </button>
+            }
+            {
+                github === "" && live === "" ?
+                    <p>Coming soon... 🫡</p>
+                : null
+            }
             {
               github === "" ?
-                null              
-              : 
+                null
+              :
                 <button className='button xs'>
                   <a target='_blank' rel="noreferrer" className='button_link flex jc-c ai-c' href={github}>
                     {t('work.projectButton2')}
                   </a>
-                </button>                
+                </button>
             }
           </span>
           <img className='cursor-link' src={img} alt={alt}/>

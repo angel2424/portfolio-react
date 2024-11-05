@@ -83,6 +83,7 @@ const ProjectsSection = () => {
                     tech={project?.tech}
                     live={project?.live}
                     github={project?.github}
+                    comingSoon={project?.comingSoon}
                   />
                 )
             )
@@ -98,6 +99,7 @@ const ProjectsSection = () => {
                     tech={project?.tech}
                     live={project?.live}
                     github={project?.github}
+                    comingSoon={project?.comingSoon}
                   />
                 )
             )}
