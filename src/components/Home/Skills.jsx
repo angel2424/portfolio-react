@@ -13,6 +13,8 @@ import githubDark from '../../images/github-dark.png'
 import { gsap } from "gsap";
 import { useContext, useLayoutEffect, useRef } from 'react';
 import { ThemeContext } from '../../App'
+import { FaVuejs, FaGreen, FaFigma } from 'react-icons/fa'
+import { SiTailwindcss, SiNuxtdotjs, SiGreensock } from 'react-icons/si'
 
 const Skills = () => {
 
@@ -21,14 +23,14 @@ const Skills = () => {
     const {theme} = useContext(ThemeContext)
 
     useLayoutEffect(() => {
-  
+
       // -- ANIMATION CODE HERE --
-  
+
       let ctx = gsap.context(() => {
-      
-        // all our animations can use selector text like ".box" 
+
+        // all our animations can use selector text like ".box"
         // and it's properly scoped to our component
-  
+
         gsap.to(".title-anim", {
           y: 0,
           delay: .1,
@@ -46,6 +48,14 @@ const Skills = () => {
             trigger: '.skill',
           }
         })
+        gsap.from(".skill svg", {
+          y: 100,
+          opacity: 0,
+          duration: .8,
+          scrollTrigger: {
+            trigger: '.skill',
+          }
+        })
         gsap.to(".skill .text-anim", {
           y: 0,
           duration: .3,
@@ -55,17 +65,17 @@ const Skills = () => {
             trigger: '.skill',
           }
         })
-  
+
       }, boxRef); // <- IMPORTANT! Scopes selector text
-      
+
       return () => ctx.revert(); // cleanup
-      
-  
+
+
     }, [])
 
   return (
     <div className='skills' ref={boxRef}>
-        
+
         <h2 className='xl title'><span className='title-anim'>Skills</span></h2>
 
         <div className={`skills_list flex flex-wrap ai-c jc-c`}>
@@ -82,8 +92,28 @@ const Skills = () => {
                 <h4 className='xs text'><span className='text-anim'>Next JS</span></h4>
             </div>
             <div className='skill flex direction-c ai-c jc-c'>
+                <FaVuejs size='5rem' color={theme === 'dark' ? '#fff' : '#000'} />
+                <h4 className='xs text'><span className='text-anim'>Vue JS</span></h4>
+            </div>
+            <div className='skill flex direction-c ai-c jc-c'>
+                <SiNuxtdotjs size='5rem' color={theme === 'dark' ? '#fff' : '#000'} />
+                <h4 className='xs text'><span className='text-anim'>Nuxt</span></h4>
+            </div>
+            <div className='skill flex direction-c ai-c jc-c'>
                 <img src={theme === 'dark' ? sass : sassDark} alt="Sass" />
                 <h4 className='xs text'><span className='text-anim'>Sass</span></h4>
+            </div>
+            <div className='skill flex direction-c ai-c jc-c'>
+                <SiTailwindcss size='5rem' color={theme === 'dark' ? '#fff' : '#000'} />
+                <h4 className='xs text'><span className='text-anim'>Tailwind CSS</span></h4>
+            </div>
+            <div className='skill flex direction-c ai-c jc-c'>
+                <SiGreensock size='5rem' color={theme === 'dark' ? '#fff' : '#000'} />
+                <h4 className='xs text'><span className='text-anim'>GSAP</span></h4>
+            </div>
+            <div className='skill flex direction-c ai-c jc-c'>
+                <FaFigma size='5rem' color={theme === 'dark' ? '#fff' : '#000'} />
+                <h4 className='xs text'><span className='text-anim'>Figma</span></h4>
             </div>
             <div className='skill flex direction-c ai-c jc-c'>
                 <img src={theme === 'dark' ? npm : npmDark} alt="NPM" />

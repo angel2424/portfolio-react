@@ -1,68 +1,61 @@
 [
 {
     "id": "1",
-    "img": "pentaprisma.png",
-    "title": "Pentaprisma | A Creative Group",
-    "slug": "good-memories",
-    "tech": ["Astro Framework", "React", "Javascript", "Netlify", "Sanity CMS", "Tailwind CSS"],
-    "live": "",
+    "img": "allende.png",
+    "title": "Government website of Allende, Coahuila",
+    "slug": "allende",
+    "tech": ["Next JS", "React", "Netlify", "Sanity CMS", "Tailwind CSS"],
+    "live": "https://allendecoahuila.com",
+    "github": ""
+  },
+  {
+    "id":  "7",
+    "img": "devworks.png",
+    "title": "DevWorks Studio",
+    "slug": "devworks",
+    "tech": ["Nuxt", "Vue 3", "Netlify", "GSAP", "Tailwind CSS"],
+    "live": "https://devworksstudio.site",
     "github": ""
   },
   {
     "id": "2",
-    "img": "goodmemx.jpg",
-    "title": "Good Memories",
-    "tech": ["React", "Next JS", "Hygraph CMS", "Netlify"],
-    "live": "https://goodmemx.ardzcodes.site",
-    "github": "https://github.com/angel2424/goodmemories"
+    "img": "bible-display.png",
+    "title": "Bible Display",
+    "slug": "bible-display",
+    "tech": ["Vue 3", "Netlify", "Fetch", "Shadcn", "Tailwind CSS"],
+    "live": "https://bible-display.devworksstudio.site",
+    "github": ""
   },
   {
     "id": "3",
-    "img": "wedding_invitation.jpg",
-    "title": "Wedding website (Template)",
-    "slug": "wedding-website",
-    "tech": ["HTML", "CSS", "Zapier", "Netlify", "Netlify Forms"],
-    "live": "https://wedding-template.ardzcodes.site",
-    "github": "https://github.com/angel2424/johnandsarah-site"
+    "img": "goodmemx.jpg",
+    "title": "Good Memories",
+    "tech": ["React", "Next JS", "Hygraph CMS", "Netlify"],
+    "live": "https://goodmemx.devworksstudio.site",
+    "github": "https://github.com/angel2424/goodmemories"
   },
   {
     "id": "4",
-    "img": "weather_app.png",
-    "title": "Weather web app",
-    "tech": ["React JS", "OpenWeather Api", "CSS"],
-    "live": "https://weather.ardzcodes.site",
-    "github": "https://github.com/angel2424/weather-app"
+    "img": "wedding_invitation.jpg",
+    "title": "Vow and Beyond | Wedding website (Template)",
+    "slug": "wedding-website",
+    "tech": ["Framer", "Figma", "UI/UX"],
+    "live": "https://vowandbeyond.framer.website/"
   },
   {
     "id": "5",
-    "img": "space_tourism.png",
-    "title": "Space Tourism",
-    "tech": ["React JS", "CSS"],
-    "live": "https://space.ardzcodes.site",
-    "github": "https://github.com/angel2424/space_tourism/tree/master"
+    "img": "weather_app.png",
+    "title": "Weather web app",
+    "tech": ["React JS", "OpenWeather Api", "CSS"],
+    "live": "https://weather.devworksstudio.site",
+    "github": "https://github.com/angel2424/weather-app"
   },
   {
     "id": "6",
-    "img": "bookmark-landing.jpg",
-    "title": "Bookmark Landing",
-    "tech": ["HTML", "Sass", "Javascript"],
-    "live": "https://bookmark.ardzcodes.site",
-    "github": "https://github.com/angel2424/bookmark_landing"
-  },
-  {
-    "id": "7",
-    "img": "todo_app.jpg",
-    "title": "To-do App",
-    "tech": ["HTML", "CSS", "Javascript"],
-    "live": "https://todo.ardzcodes.site",
-    "github": "https://github.com/angel2424/to_do_app"
-  },
-  {
-    "id": "8",
-    "img": "ecommerce_img.png",
-    "title": "E-commerce Product Page",
-    "tech": ["HTML", "Sass", "Javascript"],
-    "live": "https://ecommerce.ardzcodes.site",
-    "github": "https://github.com/angel2424/ecommerce_product_page"
+    "img": "space_tourism.png",
+    "title": "Space Tourism",
+    "tech": ["React JS", "CSS"],
+    "live": "https://space.devworksstudio.site",
+    "github": "https://github.com/angel2424/space_tourism/tree/master"
   }
 ]

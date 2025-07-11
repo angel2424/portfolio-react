@@ -14,8 +14,8 @@ const About = () => {
     // -- ANIMATION CODE HERE --
 
     let ctx = gsap.context(() => {
-    
-      // all our animations can use selector text like ".box" 
+
+      // all our animations can use selector text like ".box"
       // and it's properly scoped to our component
 
       gsap.to(".title-anim", {
@@ -43,9 +43,9 @@ const About = () => {
       })
 
     }, boxRef); // <- IMPORTANT! Scopes selector text
-    
+
     return () => ctx.revert(); // cleanup
-    
+
 
   }, [])
 
@@ -56,7 +56,13 @@ const About = () => {
       </div>
       <div className={`about_text flex direction-c jc-c`}>
           <h2 className='xl title'><span className='title-anim'>{t('about.title')}</span></h2>
-          <p className='xs'>{t('about.text')}</p>
+          <div className='about_text_content'>
+            {
+                t('about.text').split('\n\n').map((paragraph, index) => (
+                    <p className='xs' key={index}>{paragraph}</p>
+                ))
+            }
+          </div>
       </div>
     </div>
   )

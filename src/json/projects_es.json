@@ -1,74 +1,61 @@
 [
-{
-    "id": "1",
-    "img": "pentaprisma.png",
-    "title": "Pentaprisma | A Creative Group",
-    "slug": "pentaprisma",
-    "tech": ["Astro Framework", "React", "Javascript", "Netlify", "Sanity CMS", "Tailwind CSS"],
-    "live": "",
-    "github": ""
-  },
-  {
-    "id": "2",
-    "img": "goodmemx.jpg",
-    "title": "Good Memories",
-    "slug": "good-memories",
-    "tech": ["React", "Next JS", "Hygraph CMS", "Netlify"],
-    "live": "https://goodmemx.ardzcodes.site",
-    "github": "https://github.com/angel2424/goodmemories"
-  },
-  {
-    "id": "3",
-    "img": "wedding_invitation.jpg",
-    "title": "Invitacion digital (Demo)",
-    "slug": "wedding-website",
-    "tech": ["HTML", "CSS", "Zapier", "Netlify", "Netlify Forms"],
-    "live": "https://wedding-template.ardzcodes.site",
-    "github": "https://github.com/angel2424/johnandsarah-site"
-  },
-  {
-    "id": "4",
-    "img": "weather_app.png",
-    "title": "Weather web app",
-    "slug": "weather-app",
-    "tech": ["React", "Next JS", "Hygraph CMS"],
-    "live": "https://weather.ardzcodes.site",
-    "github": "https://github.com/angel2424/weather-app"
-  },
-  {
-    "id": "5",
-    "img": "space_tourism.png",
-    "title": "Space Tourism",
-    "slug": "space-tourism",
-    "tech": ["React", "Next JS", "Hygraph CMS"],
-    "live": "https://space.ardzcodes.site",
-    "github": "https://github.com/angel2424/space_tourism/tree/master"
-  },
-  {
-    "id": "6",
-    "img": "bookmark-landing.jpg",
-    "title": "Bookmark Landing",
-    "slug": "bookmark-landing",
-    "tech": ["React", "Next JS", "Hygraph CMS"],
-    "live": "https://bookmark.ardzcodes.site",
-    "github": "https://github.com/angel2424/bookmark_landing"
-  },
-  {
-    "id": "7",
-    "img": "todo_app.jpg",
-    "title": "To-do App",
-    "slug": "todo-app",
-    "tech": ["React", "Next JS", "Hygraph CMS"],
-    "live": "https://todo.ardzcodes.site",
-    "github": "https://github.com/angel2424/to_do_app"
-  },
-  {
-    "id": "8",
-    "img": "ecommerce_img.png",
-    "title": "E-commerce Product Page",
-    "slug": "ecommerce-product-page",
-    "tech": ["React", "Next JS", "Hygraph CMS"],
-    "live": "https://ecommerce.ardzcodes.site",
-    "github": "https://github.com/angel2424/ecommerce_product_page"
-  }
-]
+    {
+        "id": "1",
+        "img": "allende.png",
+        "title": "Sitio Municipal de Allende, Coahuila",
+        "slug": "allende",
+        "tech": ["Next JS", "React", "Netlify", "Sanity CMS", "Tailwind CSS"],
+        "live": "https://allendecoahuila.com",
+        "github": ""
+      },
+      {
+        "id":  "7",
+        "img": "devworks.png",
+        "title": "DevWorks Studio | Agencia de desarrollo web",
+        "slug": "devworks",
+        "tech": ["Nuxt", "Vue 3", "Netlify", "GSAP", "Tailwind CSS"],
+        "live": "https://devworksstudio.site",
+        "github": ""
+      },
+      {
+        "id": "2",
+        "img": "bible-display.png",
+        "title": "Bible Display",
+        "slug": "bible-display",
+        "tech": ["Vue 3", "Netlify", "Fetch", "Shadcn", "Tailwind CSS"],
+        "live": "https://bible-display.devworksstudio.site",
+        "github": ""
+      },
+      {
+        "id": "3",
+        "img": "goodmemx.jpg",
+        "title": "Good Memories",
+        "tech": ["React", "Next JS", "Hygraph CMS", "Netlify"],
+        "live": "https://goodmemx.devworksstudio.site",
+        "github": "https://github.com/angel2424/goodmemories"
+      },
+      {
+        "id": "4",
+        "img": "wedding_invitation.jpg",
+        "title": "Vow and Beyond | Invitación de Boda (Plantilla)",
+        "slug": "wedding-website",
+        "tech": ["HTML", "CSS", "Zapier", "Netlify", "Netlify Forms"],
+        "live": "https://vowandbeyond.framer.website/"
+      },
+      {
+        "id": "5",
+        "img": "weather_app.png",
+        "title": "Aplicación web del clima",
+        "tech": ["React JS", "OpenWeather Api", "CSS"],
+        "live": "https://weather.devworksstudio.site",
+        "github": "https://github.com/angel2424/weather-app"
+      },
+      {
+        "id": "6",
+        "img": "space_tourism.png",
+        "title": "Turismo Espacial",
+        "tech": ["React JS", "CSS"],
+        "live": "https://space.devworksstudio.site",
+        "github": "https://github.com/angel2424/space_tourism/tree/master"
+      }
+    ]

@@ -28,18 +28,18 @@ i18n
                 hello: 'Hello World! I\'m Angel',
                 role: 'Front-end Web Developer',
                 location: 'Based in Piedras Negras, Coahuila, Mexico',
-                button: 'Let\'s work together!'        
+                button: 'Let\'s work together!'
             },
             work: {
                 title: 'My favorite work',
                 projectButton1: "Live Website",
                 projectButton2: "Github",
-                button: 'View more of my work'     
+                button: 'View more of my work'
             },
             about: {
                 title: 'About Me',
-                text: 'Hello there, I\'m Angel Rodriguez, a front-end developer with a background in customer service. I enjoy solving problems, that\'s why I fell in love with web development. I have experience developing two freelance projects for a local business and several personal projects (You can check them out in the portfolio page). I am currently looking for a front-end developer position where I can expand my knowledge in development and meet people that are as passionate as I am in tech 😊. I am open to remote jobs and also relocating if needed.'     
-            }, 
+                text: "Hi, I’m a front-end developer with over two years of professional experience building user interfaces that prioritize clarity, consistency, and usability. My focus lies in crafting intuitive UI and improving user experience, whether it’s designing from the ground up or refining existing platforms.\n\nAt my full-time role, I’ve worked on 10+ large-scale projects, collaborating closely with back-end developers and fellow front-end engineers to bring designs to life. I specialize in creating and implementing UI design, development, and ensuring that every interface not only looks great but feels effortless to use.\n\nOutside of my 9–5, I run a small business developing websites for small and medium-sized businesses. I’m passionate about helping clients solve real problems through strategic, well-thought-out design and development.\n\nI care deeply about delivering work that’s both functional and visually polished. Whether I’m working solo or with a team, I aim to make collaboration smooth, communication clear, and results impactful."
+            },
             contact : {
               title: 'Let\'s get in contact!',
               subTitle: 'Want to hire me?',
@@ -71,11 +71,11 @@ i18n
                 title: 'Mi trabajo favorito',
                 projectButton1: "Live Website",
                 projectButton2: "Github",
-                button: 'Conoce mas de mi trabajo'      
+                button: 'Conoce mas de mi trabajo'
             },
             about: {
               title: 'Acerca de Mi',
-              text: 'Hola, mi nombre es Angel Rodriguez, soy un desarrollador front-end con anterior experiencia en servicio al cliente. Disfruto resolver problemas, es por eso que me enamore del desarrollo web y también diversos proyectos personales (Los puedes encontrar en la sección portfolio). Actualmente estoy buscando una posición como front-end developer donde pueda expandir mi conocimiento en programación y donde pueda conocer a más personas que sean igual de apasionadas por el desarrollo web como yo 😊. Estoy abierto a trabajar remotamente o a reubicarme si es necesario.'     
+              text: 'Hola, soy desarrollador front-end con más de dos años de experiencia profesional creando interfaces que priorizan la claridad, la consistencia y la usabilidad. Me enfoco en diseñar interfaces intuitivas y mejorar la experiencia del usuario, ya sea construyendo desde cero o refinando plataformas existentes.\n\nEn mi trabajo de tiempo completo, he participado en más de 10 proyectos a gran escala, colaborando de cerca con desarrolladores back-end y otros front-end para dar vida a los diseños. Me especializo en diseñar e implementar interfaces, desarrollarlas, y asegurarme de que cada una no solo luzca bien, sino que se sienta natural de usar.\n\nFuera de mi horario laboral, dirijo un pequeño negocio desarrollando sitios web para pequeñas y medianas empresas. Me apasiona ayudar a mis clientes a resolver problemas reales a través de diseño y desarrollo estratégico y bien pensado.\n\nMe importa profundamente entregar un trabajo que sea funcional y visualmente pulido. Ya sea trabajando de manera individual o en equipo, siempre busco que la colaboración sea fluida, la comunicación clara y los resultados impactantes.'
           },
           contact : {
             title: '¡Comunicate conmigo!',
