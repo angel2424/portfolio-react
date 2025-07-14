@@ -13,7 +13,7 @@ import githubDark from '../../images/github-dark.png'
 import { gsap } from "gsap";
 import { useContext, useLayoutEffect, useRef } from 'react';
 import { ThemeContext } from '../../App'
-import { FaVuejs, FaGreen, FaFigma } from 'react-icons/fa'
+import { FaVuejs, FaFigma } from 'react-icons/fa'
 import { SiTailwindcss, SiNuxtdotjs, SiGreensock } from 'react-icons/si'
 
 const Skills = () => {
